@@ -1,0 +1,555 @@
+[
+  {
+    "query": "MATCH (n) UNWIND labels(n) AS label RETURN label, count(*) AS n ORDER BY n DESC",
+    "rows": [
+      {
+        "label": "OntologyTerm",
+        "n": 26531
+      },
+      {
+        "label": "MedicalEntity",
+        "n": 162
+      },
+      {
+        "label": "ScientificClaim",
+        "n": 92
+      },
+      {
+        "label": "Statement",
+        "n": 79
+      },
+      {
+        "label": "Institution",
+        "n": 20
+      },
+      {
+        "label": "SourceRelease",
+        "n": 20
+      },
+      {
+        "label": "Paper",
+        "n": 20
+      },
+      {
+        "label": "Chunk",
+        "n": 20
+      },
+      {
+        "label": "Community",
+        "n": 4
+      }
+    ]
+  },
+  {
+    "query": "MATCH (o:OntologyTerm) RETURN o.source AS source, o.kind AS kind, count(*) AS terms ORDER BY source, kind",
+    "rows": [
+      {
+        "source": "Cognitive Atlas",
+        "kind": "Cognitive Task",
+        "terms": 857
+      },
+      {
+        "source": "Cognitive Atlas",
+        "kind": "Mental Process",
+        "terms": 918
+      },
+      {
+        "source": "DOID",
+        "kind": "Disease",
+        "terms": 12335
+      },
+      {
+        "source": "Hetionet",
+        "kind": "Compound",
+        "terms": 1552
+      },
+      {
+        "source": "Hetionet",
+        "kind": "Disease",
+        "terms": 1
+      },
+      {
+        "source": "Hetionet",
+        "kind": "Side Effect",
+        "terms": 5734
+      },
+      {
+        "source": "Hetionet",
+        "kind": "Symptom",
+        "terms": 438
+      },
+      {
+        "source": "MeSH",
+        "kind": "Anatomy",
+        "terms": 403
+      },
+      {
+        "source": "MeSH",
+        "kind": "Behavior",
+        "terms": 524
+      },
+      {
+        "source": "MeSH",
+        "kind": "Disease",
+        "terms": 359
+      },
+      {
+        "source": "MeSH",
+        "kind": "Drug Class",
+        "terms": 539
+      },
+      {
+        "source": "MeSH",
+        "kind": "Mental Process",
+        "terms": 263
+      },
+      {
+        "source": "MeSH",
+        "kind": "Physiology",
+        "terms": 72
+      },
+      {
+        "source": "MeSH",
+        "kind": "Procedure",
+        "terms": 2004
+      },
+      {
+        "source": "MeSH",
+        "kind": "Symptom",
+        "terms": 532
+      }
+    ]
+  },
+  {
+    "query": "MATCH ()-[r]->() RETURN type(r) AS type, count(*) AS n ORDER BY n DESC",
+    "rows": [
+      {
+        "type": "HAS_OUTCOME",
+        "n": 201
+      },
+      {
+        "type": "HAS_EXPOSURE",
+        "n": 175
+      },
+      {
+        "type": "REPORTS",
+        "n": 92
+      },
+      {
+        "type": "APPEARS_IN",
+        "n": 79
+      },
+      {
+        "type": "EXTRACTED_FROM",
+        "n": 79
+      },
+      {
+        "type": "GROUNDS_IN",
+        "n": 56
+      },
+      {
+        "type": "DISAMBIGUATED_TO",
+        "n": 39
+      },
+      {
+        "type": "IN_COMMUNITY",
+        "n": 27
+      },
+      {
+        "type": "ANCHORED_TO",
+        "n": 23
+      },
+      {
+        "type": "ISSUED_BY",
+        "n": 20
+      },
+      {
+        "type": "ANNOUNCES",
+        "n": 20
+      },
+      {
+        "type": "CHUNK_OF",
+        "n": 20
+      }
+    ]
+  },
+  {
+    "query": "MATCH ()-[e:EXTRACTED_FROM|REPORTS|HAS_EXPOSURE|HAS_OUTCOME]->()\nRETURN type(e) AS type, avg(CASE WHEN e.model_id IS NOT",
+    "rows": [
+      {
+        "type": "EXTRACTED_FROM",
+        "provenance_complete": 1.0
+      },
+      {
+        "type": "REPORTS",
+        "provenance_complete": 1.0
+      },
+      {
+        "type": "HAS_EXPOSURE",
+        "provenance_complete": 1.0
+      },
+      {
+        "type": "HAS_OUTCOME",
+        "provenance_complete": 1.0
+      }
+    ]
+  },
+  {
+    "query": "MATCH (m:MedicalEntity) RETURN m.entity_type AS entity_type, m.ontology_id IS NOT NULL AS linked, count(*) AS entities O",
+    "rows": [
+      {
+        "entity_type": "behavior",
+        "linked": false,
+        "entities": 11
+      },
+      {
+        "entity_type": "behavior",
+        "linked": true,
+        "entities": 3
+      },
+      {
+        "entity_type": "chemical_drug",
+        "linked": false,
+        "entities": 2
+      },
+      {
+        "entity_type": "chemical_drug",
+        "linked": true,
+        "entities": 2
+      },
+      {
+        "entity_type": "disorder",
+        "linked": false,
+        "entities": 12
+      },
+      {
+        "entity_type": "disorder",
+        "linked": true,
+        "entities": 24
+      },
+      {
+        "entity_type": "other",
+        "linked": false,
+        "entities": 32
+      },
+      {
+        "entity_type": "physiology",
+        "linked": false,
+        "entities": 60
+      },
+      {
+        "entity_type": "physiology",
+        "linked": true,
+        "entities": 8
+      },
+      {
+        "entity_type": "procedure",
+        "linked": false,
+        "entities": 7
+      },
+      {
+        "entity_type": "procedure",
+        "linked": true,
+        "entities": 1
+      }
+    ]
+  },
+  {
+    "query": "MATCH (m:MedicalEntity)-[:ANCHORED_TO]->(o:OntologyTerm) RETURN m.entity_type AS entity_type, o.kind AS anchor_kind, m.o",
+    "rows": [
+      {
+        "entity_type": "physiology",
+        "anchor_kind": "Mental Process",
+        "exact": false,
+        "n": 9
+      },
+      {
+        "entity_type": "procedure",
+        "anchor_kind": "Procedure",
+        "exact": false,
+        "n": 4
+      },
+      {
+        "entity_type": "disorder",
+        "anchor_kind": "Disease",
+        "exact": false,
+        "n": 4
+      },
+      {
+        "entity_type": "behavior",
+        "anchor_kind": "Mental Process",
+        "exact": false,
+        "n": 3
+      },
+      {
+        "entity_type": "physiology",
+        "anchor_kind": "Physiology",
+        "exact": false,
+        "n": 2
+      },
+      {
+        "entity_type": "physiology",
+        "anchor_kind": "Anatomy",
+        "exact": false,
+        "n": 1
+      }
+    ]
+  },
+  {
+    "query": "MATCH (m:MedicalEntity)-[:ANCHORED_TO]->(o:OntologyTerm) RETURN o.id AS id, o.name AS anchor, count(m) AS entities ORDER",
+    "rows": [
+      {
+        "id": "COGAT:trm_4a3fd79d0b4cd",
+        "anchor": "visual search",
+        "entities": 2
+      },
+      {
+        "id": "DOID:0080600",
+        "anchor": "COVID-19",
+        "entities": 2
+      },
+      {
+        "id": "COGAT:trm_559f0a129c136",
+        "anchor": "response bias",
+        "entities": 1
+      },
+      {
+        "id": "MESH:D001143",
+        "anchor": "Arousal",
+        "entities": 1
+      },
+      {
+        "id": "MESH:D012890",
+        "anchor": "Sleep",
+        "entities": 1
+      },
+      {
+        "id": "MESH:D003700",
+        "anchor": "Delta Rhythm",
+        "entities": 1
+      },
+      {
+        "id": "MESH:D000161",
+        "anchor": "Acoustic Stimulation",
+        "entities": 1
+      },
+      {
+        "id": "MESH:D011878",
+        "anchor": "Radiotherapy",
+        "entities": 1
+      },
+      {
+        "id": "MESH:D065818",
+        "anchor": "Gamma Rhythm",
+        "entities": 1
+      },
+      {
+        "id": "COGAT:trm_502403240a2a2",
+        "anchor": "reinstatement",
+        "entities": 1
+      }
+    ]
+  },
+  {
+    "query": "MATCH (s:Statement) WHERE NOT EXISTS { (s)-[:APPEARS_IN]->() } WITH count(s) AS n RETURN 'statement_without_release' AS ",
+    "rows": [
+      {
+        "check": "statement_without_release",
+        "n": 0
+      },
+      {
+        "check": "claim_without_paper",
+        "n": 0
+      }
+    ]
+  },
+  {
+    "query": "MATCH (s:Statement)-[:GROUNDS_IN]->(c:ScientificClaim)<-[:REPORTS]-(p:Paper)\nWHERE NOT EXISTS { (s)-[:APPEARS_IN]->(:Sou",
+    "rows": [
+      {
+        "check": "grounds_in_wrong_paper",
+        "n": 0
+      }
+    ]
+  },
+  {
+    "query": "MATCH (s:Statement) RETURN s.resolution_status AS status, coalesce(s.unresolved_reason, '-') AS reason, count(*) AS n OR",
+    "rows": [
+      {
+        "status": "resolved",
+        "reason": "-",
+        "n": 56
+      },
+      {
+        "status": "unresolved",
+        "reason": "llm_none",
+        "n": 15
+      },
+      {
+        "status": "unresolved",
+        "reason": "no_finding",
+        "n": 5
+      },
+      {
+        "status": "unresolved",
+        "reason": "no_candidates",
+        "n": 3
+      }
+    ]
+  },
+  {
+    "query": "MATCH (:Statement)-[g:GROUNDS_IN]->(:ScientificClaim)\nRETURN g.exaggeration_label AS label, g.match_method AS method, co",
+    "rows": [
+      {
+        "label": "aligned",
+        "method": "llm",
+        "n": 25
+      },
+      {
+        "label": "aligned",
+        "method": "llm_entity",
+        "n": 15
+      },
+      {
+        "label": "overstated",
+        "method": "llm",
+        "n": 13
+      },
+      {
+        "label": "understated",
+        "method": "llm",
+        "n": 3
+      }
+    ]
+  },
+  {
+    "query": "MATCH (:Statement)-[g:GROUNDS_IN]->(:ScientificClaim)\nRETURN g.mode AS mode, count(*) AS grounds_in,\n       sum(CASE WHE",
+    "rows": [
+      {
+        "mode": "llm",
+        "grounds_in": 56,
+        "rerated": 21,
+        "null_reframed": 0
+      }
+    ]
+  },
+  {
+    "query": "MATCH (s:Statement)-[g:GROUNDS_IN {exaggeration_label: 'overstated'}]->(c:ScientificClaim)\nRETURN s.euid AS release, s.e",
+    "rows": [
+      {
+        "release": "789120",
+        "press_wording": "Cutting off and then restoring blood supply to a limb following a stroke reduces tissue damage and swelling and improves functional recovery, according to a new study in mice published in JNeurosci.",
+        "paper_wording": "We observed that mice subjected to poststroke RLC shifted circulating monocytes to a CCR2+ proinflammatory monocyte subset and had reduced acute brain injury, swelling, and improved motor/gait function in chronic stroke.",
+        "press_strength": 3,
+        "paper_strength": 1,
+        "method": "llm",
+        "explanation": "The press statement reports that limb blood-supply cycling reduces brain tissue damage in mice, which matches candidate 1's reduced acute brain injury after poststroke conditioning; candidate 2 covers swelling and candidate 3 covers motor function. The press wording 'reduces' is direct causal (3), while the abstract's 'had reduced acute brain injury' is a reported observation without causal framing, so I rate it 1 as the nearest correlational-style wording."
+      },
+      {
+        "release": "822151",
+        "press_wording": "\"In emotional situations, the lateral preference shifts to the right,\" describes Packheiser.",
+        "paper_wording": "However, emotional context also affects side biases, most strongly for embracing.",
+        "press_strength": 3,
+        "paper_strength": 1,
+        "method": "llm",
+        "explanation": "Candidate 2 reports the same finding: emotional context affects side biases in social touch, most strongly for embracing, matching the press claim that the lateral preference shifts in emotional situations. The press statement asserts a shift directly ('shifts to the right') while candidate 2 says only that emotional context 'also affects' side biases, which is a non-directional, correlational-type claim, so the press wording is stronger and gains a direction."
+      },
+      {
+        "release": "857697",
+        "press_wording": "This inflammatory signaling in tumors was capable of directly damaging cochlear cells that are essential for hearing.",
+        "paper_wording": "In preparation to translate these exciting findings into the clinic, we used patient samples and data and demonstrated that IL-6/STAT3 signaling inversely associated with hearing function, that elevated production of tumor-derived IL-6 was associated with reduced viability of cochlear sensory cells and neurons in ex vivo organotypic cochlear cultures, and that patients receiving angiotensin receptor blockers have no progression in VS-induced hearing loss compared with patients on other or no antihypertensives based on a retrospective analysis of patients with VS and hypertension.",
+        "press_strength": 3,
+        "paper_strength": 1,
+        "method": "llm",
+        "explanation": "Candidate 3 reports the same finding: tumor-derived IL-6 reduced viability of cochlear cells, which matches the press statement's claim that inflammatory signaling damaged cochlear cells. The press wording 'capable of directly damaging' is direct causal (3), while candidate 3's 'was associated with reduced viability' is correlational (1), though the ex vivo culture design is a mechanistic setting, not a rating basis."
+      },
+      {
+        "release": "798073",
+        "press_wording": "The researchers also found that individuals with the allele APOE E4/E4, the greatest genetic risk factor for Alzheimer's, had decreased expression of antiviral defense genes, which could make these patients more susceptible to COVID-19.",
+        "paper_wording": "Overall, individuals with the AD risk allele APOE E4/E4 displayed reduced expression of antiviral defense genes compared to APOE E3/E3 individuals.",
+        "press_strength": 2,
+        "paper_strength": 1,
+        "method": "llm",
+        "explanation": "Candidate 1 reports the same finding: APOE E4/E4 individuals showing reduced antiviral defense gene expression. The press statement's original wording says 'had decreased expression' (a plain finding, correlational-level assertion of a difference) and adds 'could make these patients more susceptible,' which is a conditional causal extension, while candidate 1 says 'displayed reduced expression' with no causal language."
+      },
+      {
+        "release": "789120",
+        "press_wording": "The symptoms improved for both moderate and severe strokes, indicating the potential for wide application as a stroke treatment.",
+        "paper_wording": "We observed that mice subjected to poststroke RLC shifted circulating monocytes to a CCR2+ proinflammatory monocyte subset and had reduced acute brain injury, swelling, and improved motor/gait function in chronic stroke.",
+        "press_strength": 2,
+        "paper_strength": 1,
+        "method": "llm",
+        "explanation": "The press statement says symptoms improved for moderate and severe strokes after remote ischemic limb conditioning, which is closest to candidate 1's improved motor and gait function in chronic stroke, though the press wording is about symptoms in both stroke severities and the candidate is about motor/gait function. The press original wording 'indicating the potential for wide application' is conditional-causal (2) with 'symptoms improved' as the outcome claim, while candidate 1's 'improved motor/gait function' is stated as a plain finding of the study, rated 1 because it is a descriptive observation of improvement without causal verbs."
+      },
+      {
+        "release": "798073",
+        "press_wording": "June 10, 2021, CLEVELAND: A new Cleveland Clinic-led study has identified mechanisms by which COVID-19 can lead to Alzheimer's disease-like dementia.",
+        "paper_wording": "We found significant network-based relationships between COVID-19 and neuroinflammation and brain microvascular injury pathways and processes which are implicated in AD.",
+        "press_strength": 2,
+        "paper_strength": 1,
+        "method": "llm",
+        "explanation": "The press statement says a study identified mechanisms by which COVID-19 can lead to AD-like dementia; candidate 2 reports network-based relationships between COVID-19 and neuroinflammation and microvascular injury pathways implicated in AD, the closest mechanistic finding, though candidate 1 states mechanistic overlap and candidate 3 is a near-duplicate subset. The press wording 'can lead to' is conditional causal (2), while the abstract wordings 'suggest overlap' and 'found relationships' are correlational or hedged (1 at most, rated 1 for 'found significant relationships')."
+      },
+      {
+        "release": "789120",
+        "press_wording": "The research team found that the ratio of inflammatory to non-inflammatory monocytes circulating in the blood increased, resulting in more available inflammatory cells.",
+        "paper_wording": "We observed that mice subjected to poststroke RLC shifted circulating monocytes to a CCR2+ proinflammatory monocyte subset and had reduced acute brain injury, swelling, and improved motor/gait function in chronic stroke.",
+        "press_strength": 2,
+        "paper_strength": 1,
+        "method": "llm",
+        "explanation": "Candidate 1 reports the same finding: RLC shifted circulating monocytes toward the CCR2+ proinflammatory subset, which the press statement describes as a rise in the inflammatory-to-non-inflammatory monocyte ratio. The press wording 'increased' and 'resulting in' is a causal-style verb, while candidate 1 says 'shifted' with no explicit causal or associational verb, so I rate candidate 1 as correlational-to-neutral at 1 and the press statement as 2 for its 'resulting in' causal framing, with both directions increase."
+      },
+      {
+        "release": "895310",
+        "press_wording": "\"There is extensive evidence that color, size, orientation, and motion are the most efficient features for guiding a human's attention. We found the same universal features will also make a target pop out against a busy background for animals with very different brain anatomies and living environments,\" says Professor Ohad Ben-Shahar, the chair of BGU's Department of Computer Science.",
+        "paper_wording": "Given earlier observations that moving targets elicit pop-out and parallel search in the archerfish during visual-search tasks, here we investigate and confirm that all four of these visual features also facilitate efficient search in the archerfish in a manner comparable to humans.",
+        "press_strength": 3,
+        "paper_strength": 2,
+        "method": "llm",
+        "explanation": "The press statement says orientation makes a target pop out for archerfish, and candidate 1 reports that all four features, including orientation, facilitate efficient search in archerfish; candidates 2 and 3 name motion and color, which are different features. Candidate 1's wording 'facilitate' is conditional causal (2) rather than direct causal, while the press statement's 'will also make a target pop out' is a direct causal claim (3), so the press statement is stronger."
+      },
+      {
+        "release": "1075445",
+        "press_wording": "By doing so, TFE3 not only prevents the accumulation of damaged mitochondria but also fosters mitochondrial biogenesis by upregulating PGC1-alpha and TFAM, critical regulators of energy metabolism and cellular health.",
+        "paper_wording": "TFE3 overexpression also reversed the down-regulation of Parkin, promoting the clearance of accumulated mitochondria, and restored the expression of PGC1-\u03b1 and TFAM, thereby enhancing mitochondrial biogenesis in the adeno-associated virus-\u03b1-Syn model.",
+        "press_strength": 3,
+        "paper_strength": 2,
+        "method": "llm",
+        "explanation": "The press statement says TFE3 prevents accumulation of damaged mitochondria; candidate 2 reports promoting clearance of accumulated mitochondria in the same model, which is the closest match even though it is a reversal framing rather than prevention. Candidate 2's wording 'promoting the clearance' is correlational-to-causal but reads as a mechanistic promotion, rated 2 as conditional causal, while the press 'prevents' is direct causal, rated 3."
+      },
+      {
+        "release": "1039084",
+        "press_wording": "High blood pressure also appears to be a risk factor for PCS diagnosis, according to the study\u2019s findings.",
+        "paper_wording": "Hypertension associated with PCS cohort (26.61%) than in COVID-19-negative (OR 17.16, 95% CI 15.23 to 19.3) and COVID-19-positive (OR 9.25, 95% CI 8.41 to 10.16) controls, although most individuals received this diagnosis before COVID-19.",
+        "press_strength": 2,
+        "paper_strength": 1,
+        "method": "llm",
+        "explanation": "Candidate 1 reports the same finding: hypertension as a factor associated with PCS diagnosis, compared with controls. The press statement says 'appears to be a risk factor' (hedged, conditional causal), while candidate 1 only reports hypertension being more common in the PCS cohort (correlational, no causal verb), so the press release overstates the association as a risk factor."
+      }
+    ]
+  },
+  {
+    "query": "MATCH (s:Statement)-[g:GROUNDS_IN {null_reframed: true}]->(c:ScientificClaim)\nRETURN s.euid AS release, s.evidence_span ",
+    "rows": []
+  },
+  {
+    "query": "MATCH (k:Community)<-[:IN_COMMUNITY]-(c:ScientificClaim)\nWITH k, count(c) AS n WHERE n < 2 RETURN 'community_below_min_s",
+    "rows": []
+  },
+  {
+    "query": "MATCH (c:ScientificClaim)-[:IN_COMMUNITY]->(k:Community) WITH c, count(k) AS n WHERE n > 1\nRETURN 'claim_in_multiple_com",
+    "rows": []
+  },
+  {
+    "query": "MATCH (k:Community) RETURN count(k) AS communities, sum(k.size) AS claims, min(k.size) AS min_size, max(k.size) AS max_s",
+    "rows": [
+      {
+        "communities": 4,
+        "claims": 27,
+        "min_size": 2,
+        "max_size": 18,
+        "multi_paper": 4
+      }
+    ]
+  }
+]

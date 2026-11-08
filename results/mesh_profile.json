@@ -1,0 +1,31 @@
+{
+  "file": "d2025.bin",
+  "descriptors_in_branches": 5612,
+  "new_terms": 4696,
+  "new_by_kind": {
+    "Anatomy": 403,
+    "Drug Class": 539,
+    "Procedure": 2004,
+    "Symptom": 532,
+    "Mental Process": 263,
+    "Behavior": 524,
+    "Disease": 359,
+    "Physiology": 72
+  },
+  "merged_into_doid": 573,
+  "merged_into_hetionet_symptom": 336,
+  "branches": {
+    "C10": "Disease",
+    "F03": "Disease",
+    "C23": "Symptom",
+    "F01": "Behavior",
+    "F02": "Mental Process",
+    "G11.561": "Physiology",
+    "A08": "Anatomy",
+    "D27.505": "Drug Class",
+    "E01": "Procedure",
+    "E02": "Procedure",
+    "E04": "Procedure",
+    "F04": "Procedure"
+  }
+}

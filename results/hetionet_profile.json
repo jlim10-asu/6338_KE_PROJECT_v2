@@ -1,0 +1,8 @@
+{
+  "nodes": {
+    "Compound": 1552,
+    "Disease": 137,
+    "Symptom": 438,
+    "Side Effect": 5734
+  }
+}

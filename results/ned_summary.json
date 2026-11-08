@@ -1,0 +1,60 @@
+{
+  "exact_lexicon": 19,
+  "llm_nil": 60,
+  "llm_select": 17,
+  "no_candidates": 21,
+  "not_in_vocab": 32,
+  "distinct_canonical": 145,
+  "distinct_mentions": 149,
+  "by_type": {
+    "physiology": {
+      "mentions": 62,
+      "linked": 6
+    },
+    "disorder": {
+      "mentions": 34,
+      "linked": 25
+    },
+    "other": {
+      "mentions": 32,
+      "linked": 0
+    },
+    "behavior": {
+      "mentions": 11,
+      "linked": 2
+    },
+    "procedure": {
+      "mentions": 7,
+      "linked": 1
+    },
+    "chemical_drug": {
+      "mentions": 3,
+      "linked": 2
+    }
+  },
+  "mixed_type_mentions": 2,
+  "kinds_by_type": {
+    "disorder": [
+      "Disease",
+      "Symptom",
+      "Side Effect"
+    ],
+    "chemical_drug": [
+      "Compound",
+      "Drug Class"
+    ],
+    "procedure": [
+      "Procedure",
+      "Cognitive Task"
+    ],
+    "physiology": [
+      "Physiology",
+      "Mental Process",
+      "Anatomy"
+    ],
+    "behavior": [
+      "Behavior",
+      "Mental Process"
+    ]
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "run_at": "2026-11-08T09:51:17.334858+00:00",
+  "algorithm": "gds.leiden.write",
+  "min_size": 2,
+  "seed": 42,
+  "cross_paper_only": true,
+  "excluded_entities": [
+    "mortality",
+    "all-cause mortality",
+    "survival",
+    "overall survival",
+    "Adverse reaction",
+    "Apoptosis",
+    "age",
+    "sex",
+    "female sex",
+    "male sex"
+  ],
+  "anchor_weight": 0.5,
+  "projection": {
+    "claims_with_shared_entity": 27,
+    "claim_pairs": 116
+  },
+  "leiden": {
+    "communityCount": 4,
+    "modularity": 0.24930747922437677,
+    "ranLevels": 2,
+    "didConverge": true,
+    "nodePropertiesWritten": 27
+  },
+  "communities_written": 4,
+  "claims_total": 92,
+  "claims_in_community": 27,
+  "claims_unassigned": 65,
+  "size_min_max_mean": [
+    2,
+    18,
+    6.75
+  ],
+  "multi_paper_communities": 4,
+  "communities_below_min_size": 0,
+  "top_communities": [
+    {
+      "community_id": 1,
+      "claims": 18,
+      "papers": 3,
+      "top_entities": [
+        "COVID-19",
+        "taste and smell dysfunction",
+        "Dyspnea",
+        "Cough",
+        "Headache",
+        "Throat sore",
+        "muscle pain",
+        "Myalgia"
+      ],
+      "top_anchors": [
+        "Brain Injuries",
+        "Ischemic Preconditioning"
+      ]
+    },
+    {
+      "community_id": 2,
+      "claims": 5,
+      "papers": 2,
+      "top_entities": [
+        "female sex",
+        "long COVID",
+        "age",
+        "mechanical ventilation",
+        "Respiration, Artificial",
+        "hypertension",
+        "Dyspnoea"
+      ],
+      "top_anchors": []
+    },
+    {
+      "community_id": 7,
+      "claims": 2,
+      "papers": 2,
+      "top_entities": [
+        "tfe3",
+        "motor function",
+        "remote ischemic limb conditioning"
+      ],
+      "top_anchors": [
+        "Motor Skills",
+        "Ischemic Preconditioning"
+      ]
+    },
+    {
+      "community_id": 5,
+      "claims": 2,
+      "papers": 2,
+      "top_entities": [
+        "Losartan",
+        "neuro-edema",
+        "brain edema",
+        "remote ischemic limb conditioning",
+        "Edema cerebral"
+      ],
+      "top_anchors": [
+        "Ischemic Preconditioning"
+      ]
+    }
+  ]
+}

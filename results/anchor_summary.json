@@ -1,0 +1,28 @@
+{
+  "run": {
+    "no_candidates": 19,
+    "anchor_nil": 39,
+    "anchor_select": 23
+  },
+  "cleared_by_stoplist": 0,
+  "edges_written": 23,
+  "by_method": {
+    "anchor_nil": 39,
+    "anchor_select": 23,
+    "no_candidates": 19
+  },
+  "anchored_by_type": {
+    "behavior": 3,
+    "disorder": 4,
+    "physiology": 12,
+    "procedure": 4
+  },
+  "anchored_by_kind": {
+    "Anatomy": 1,
+    "Disease": 4,
+    "Mental Process": 12,
+    "Physiology": 2,
+    "Procedure": 4
+  },
+  "distinct_anchor_terms": 21
+}

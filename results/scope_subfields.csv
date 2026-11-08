@@ -1,0 +1,211 @@
+field,subfield_id,subfield,releases
+Medicine,2739.0,"Public Health, Environmental and Occupational Health",4094
+Medicine,2725.0,Infectious Diseases,3549
+Neuroscience,2805.0,Cognitive Neuroscience,2774
+Medicine,2730.0,Oncology,2528
+Medicine,2728.0,Clinical Neurology,2108
+Neuroscience,2804.0,Cellular and Molecular Neuroscience,1852
+Medicine,2705.0,Cardiology and Cardiovascular Medicine,1627
+Medicine,2713.0,Epidemiology,1274
+"Biochemistry, Genetics and Molecular Biology",1312.0,Molecular Biology,1142
+Medicine,2740.0,Pulmonary and Respiratory Medicine,1070
+Medicine,2738.0,Psychiatry and Mental health,1066
+Medicine,2746.0,Surgery,1045
+Medicine,2712.0,"Endocrinology, Diabetes and Metabolism",1023
+Medicine,2737.0,Physiology (medical),904
+Medicine,2735.0,"Pediatrics, Perinatology and Child Health",715
+Medicine,2741.0,"Radiology, Nuclear Medicine and Imaging",689
+Medicine,2720.0,Hematology,654
+Medicine,2736.0,Pharmacology (medical),609
+Neuroscience,2807.0,Endocrine and Autonomic Systems,539
+Medicine,2729.0,Obstetrics and Gynecology,537
+Medicine,2721.0,Hepatology,481
+"Biochemistry, Genetics and Molecular Biology",1307.0,Cell Biology,478
+Neuroscience,2808.0,Neurology,456
+Immunology and Microbiology,2403.0,Immunology,409
+"Biochemistry, Genetics and Molecular Biology",1306.0,Cancer Research,388
+Medicine,2731.0,Ophthalmology,363
+Medicine,2743.0,Reproductive Medicine,357
+Medicine,2727.0,Nephrology,356
+Medicine,2732.0,Orthopedics and Sports Medicine,343
+Neuroscience,2809.0,Sensory Systems,328
+"Biochemistry, Genetics and Molecular Biology",1311.0,Genetics,325
+Medicine,2745.0,Rheumatology,315
+Medicine,2708.0,Dermatology,298
+Medicine,2748.0,Urology,287
+Engineering,2204.0,Biomedical Engineering,273
+Medicine,2711.0,Emergency Medicine,261
+Medicine,2715.0,Gastroenterology,251
+Medicine,2717.0,Geriatrics and Gerontology,238
+Psychology,3203.0,Clinical Psychology,226
+Nursing,2916.0,Nutrition and Dietetics,223
+Neuroscience,2806.0,Developmental Neuroscience,203
+Medicine,2734.0,Pathology and Forensic Medicine,192
+Medicine,2706.0,Critical Care and Intensive Care Medicine,183
+Psychology,3205.0,Experimental and Cognitive Psychology,152
+Medicine,2723.0,Immunology and Allergy,144
+Medicine,2718.0,Health Informatics,142
+"Economics, Econometrics and Finance",2002.0,Economics and Econometrics,140
+Medicine,2716.0,Genetics (clinical),134
+Computer Science,1702.0,Artificial Intelligence,131
+Social Sciences,3306.0,Health,125
+Social Sciences,3312.0,Sociology and Political Science,123
+Health Professions,3612.0,"Physical Therapy, Sports Therapy and Rehabilitation",123
+Mathematics,2611.0,Modeling and Simulation,121
+Health Professions,3600.0,General Health Professions,120
+Materials Science,2502.0,Biomaterials,117
+Medicine,2742.0,Rehabilitation,108
+Medicine,2703.0,Anesthesiology and Pain Medicine,108
+Psychology,3207.0,Social Psychology,104
+Immunology and Microbiology,2402.0,Applied Microbiology and Biotechnology,102
+Medicine,2733.0,Otorhinolaryngology,93
+Medicine,2707.0,Complementary and alternative medicine,93
+Environmental Science,2307.0,"Health, Toxicology and Mutagenesis",84
+"Biochemistry, Genetics and Molecular Biology",1302.0,Aging,84
+Agricultural and Biological Sciences,1105.0,"Ecology, Evolution, Behavior and Systematics",82
+Health Professions,3616.0,Speech and Hearing,80
+"Biochemistry, Genetics and Molecular Biology",1304.0,Biophysics,77
+Neuroscience,2802.0,Behavioral Neuroscience,74
+Social Sciences,3304.0,Education,71
+Medicine,2724.0,Internal Medicine,65
+Psychology,3204.0,Developmental and Educational Psychology,65
+Medicine,2747.0,Transplantation,63
+"Biochemistry, Genetics and Molecular Biology",1303.0,Biochemistry,60
+Physics and Astronomy,3107.0,"Atomic and Molecular Physics, and Optics",59
+Agricultural and Biological Sciences,1106.0,Food Science,59
+Agricultural and Biological Sciences,1103.0,Animal Science and Zoology,57
+Veterinary,3404.0,Small Animals,57
+Medicine,2714.0,Family Practice,55
+Computer Science,1707.0,Computer Vision and Pattern Recognition,55
+"Pharmacology, Toxicology and Pharmaceutics",3004.0,Pharmacology,48
+Arts and Humanities,1211.0,Philosophy,47
+Chemistry,1605.0,Organic Chemistry,46
+Agricultural and Biological Sciences,1110.0,Plant Science,45
+"Pharmacology, Toxicology and Pharmaceutics",3005.0,Toxicology,45
+Environmental Science,2303.0,Ecology,44
+Medicine,2704.0,Biochemistry (medical),42
+Materials Science,2505.0,Materials Chemistry,41
+Neuroscience,2803.0,Biological Psychiatry,40
+Physics and Astronomy,3108.0,Radiation,39
+Immunology and Microbiology,2405.0,Parasitology,38
+Engineering,2208.0,Electrical and Electronic Engineering,37
+"Pharmacology, Toxicology and Pharmaceutics",3003.0,Pharmaceutical Science,36
+Nursing,2910.0,"Issues, ethics and legal aspects",36
+Decision Sciences,1800.0,General Decision Sciences,36
+Immunology and Microbiology,2404.0,Microbiology,34
+Health Professions,3605.0,Health Information Management,33
+Immunology and Microbiology,2406.0,Virology,32
+Chemistry,1602.0,Analytical Chemistry,31
+Computer Science,1709.0,Human-Computer Interaction,29
+Chemistry,1607.0,Spectroscopy,27
+"Pharmacology, Toxicology and Pharmaceutics",3002.0,Drug Discovery,26
+Arts and Humanities,1204.0,Archeology (arts and humanities),26
+Social Sciences,3309.0,Library and Information Sciences,26
+"Business, Management and Accounting",1406.0,Marketing,25
+Dentistry,3506.0,Periodontics,24
+Nursing,2911.0,Leadership and Management,24
+Engineering,2213.0,"Safety, Risk, Reliability and Quality",23
+Social Sciences,3317.0,Demography,23
+Social Sciences,3318.0,Gender Studies,23
+Agricultural and Biological Sciences,1109.0,Insect Science,21
+Health Professions,3611.0,Pharmacy,21
+Physics and Astronomy,3109.0,Statistical and Nonlinear Physics,20
+Mathematics,2613.0,Statistics and Probability,18
+Social Sciences,3314.0,Anthropology,18
+Social Sciences,3308.0,Law,18
+Psychology,3202.0,Applied Psychology,18
+Dentistry,3500.0,General Dentistry,18
+"Biochemistry, Genetics and Molecular Biology",1310.0,Endocrinology,17
+Social Sciences,3315.0,Communication,17
+Medicine,2726.0,Microbiology (medical),16
+Nursing,2922.0,Research and Theory,16
+Social Sciences,3307.0,Human Factors and Ergonomics,16
+Computer Science,1710.0,Information Systems,16
+Health Professions,3604.0,Emergency Medical Services,15
+Mathematics,2604.0,Applied Mathematics,14
+"Biochemistry, Genetics and Molecular Biology",1305.0,Biotechnology,14
+Dentistry,3504.0,Oral Surgery,13
+"Business, Management and Accounting",1405.0,Management of Technology and Innovation,13
+Environmental Science,2306.0,Global and Planetary Change,13
+Health Professions,3607.0,Medical Laboratory Technology,12
+Engineering,2202.0,Aerospace Engineering,11
+Social Sciences,3320.0,Political Science and International Relations,11
+Physics and Astronomy,3103.0,Astronomy and Astrophysics,11
+Engineering,2210.0,Mechanical Engineering,11
+Materials Science,2504.0,"Electronic, Optical and Magnetic Materials",11
+"Biochemistry, Genetics and Molecular Biology",1308.0,Clinical Biochemistry,10
+Chemical Engineering,1507.0,Fluid Flow and Transfer Processes,10
+Materials Science,2508.0,"Surfaces, Coatings and Films",10
+Physics and Astronomy,3104.0,Condensed Matter Physics,9
+Materials Science,2507.0,Polymers and Plastics,9
+Environmental Science,2310.0,Pollution,9
+"Business, Management and Accounting",1407.0,Organizational Behavior and Human Resource Management,9
+Arts and Humanities,1210.0,Music,8
+Chemistry,1606.0,Physical and Theoretical Chemistry,8
+Decision Sciences,1804.0,"Statistics, Probability and Uncertainty",8
+Arts and Humanities,1207.0,History and Philosophy of Science,8
+Environmental Science,2305.0,Environmental Engineering,7
+Health Professions,3609.0,Occupational Therapy,7
+Environmental Science,2312.0,Water Science and Technology,7
+Social Sciences,3322.0,Urban Studies,7
+Environmental Science,2308.0,"Management, Monitoring, Policy and Law",7
+Chemistry,1604.0,Inorganic Chemistry,7
+"Biochemistry, Genetics and Molecular Biology",1314.0,Physiology,7
+Computer Science,1711.0,Signal Processing,6
+Engineering,2206.0,Computational Mechanics,6
+Veterinary,3402.0,Equine,6
+Decision Sciences,1803.0,Management Science and Operations Research,6
+Social Sciences,3313.0,Transportation,6
+Physics and Astronomy,3102.0,Acoustics and Ultrasonics,6
+Social Sciences,3303.0,Development,6
+Arts and Humanities,1202.0,History,5
+"Biochemistry, Genetics and Molecular Biology",1315.0,Structural Biology,5
+Earth and Planetary Sciences,1911.0,Paleontology,5
+Engineering,2209.0,Industrial and Manufacturing Engineering,5
+Engineering,2207.0,Control and Systems Engineering,5
+Computer Science,1703.0,Computational Theory and Mathematics,4
+Engineering,2211.0,Mechanics of Materials,4
+Environmental Science,2309.0,Nature and Landscape Conservation,4
+Agricultural and Biological Sciences,1102.0,Agronomy and Crop Science,4
+Physics and Astronomy,3106.0,Nuclear and High Energy Physics,3
+"Business, Management and Accounting",1409.0,"Tourism, Leisure and Hospitality Management",3
+Arts and Humanities,1213.0,Visual Arts and Performing Arts,3
+Mathematics,2614.0,Theoretical Computer Science,3
+Mathematics,2610.0,Mathematical Physics,3
+Social Sciences,3310.0,Linguistics and Language,3
+"Biochemistry, Genetics and Molecular Biology",1313.0,Molecular Medicine,3
+"Biochemistry, Genetics and Molecular Biology",1309.0,Developmental Biology,3
+Computer Science,1706.0,Computer Science Applications,3
+Medicine,2702.0,Anatomy,3
+Chemical Engineering,1508.0,Process Chemistry and Technology,2
+Computer Science,1704.0,Computer Graphics and Computer-Aided Design,2
+Earth and Planetary Sciences,1912.0,Space and Planetary Science,2
+Engineering,2215.0,Building and Construction,2
+Environmental Science,2311.0,Waste Management and Disposal,2
+Social Sciences,3321.0,Public Administration,2
+Psychology,3206.0,Neuropsychology and Physiological Psychology,2
+Materials Science,2500.0,General Materials Science,2
+Social Sciences,3316.0,Cultural Studies,2
+Chemical Engineering,1504.0,Chemical Health and Safety,1
+"Business, Management and Accounting",1408.0,Strategy and Management,1
+Agricultural and Biological Sciences,1100.0,General Agricultural and Biological Sciences,1
+Arts and Humanities,1203.0,Language and Linguistics,1
+Agricultural and Biological Sciences,1111.0,Soil Science,1
+Arts and Humanities,1209.0,Museology,1
+Arts and Humanities,1208.0,Literature and Literary Theory,1
+Environmental Science,2304.0,Environmental Chemistry,1
+Engineering,2216.0,Architecture,1
+Engineering,2203.0,Automotive Engineering,1
+Energy,2103.0,Fuel Technology,1
+Earth and Planetary Sciences,1908.0,Geophysics,1
+Earth and Planetary Sciences,1902.0,Atmospheric Science,1
+Dentistry,3505.0,Orthodontics,1
+Earth and Planetary Sciences,1910.0,Oceanography,1
+Decision Sciences,1802.0,Information Systems and Management,1
+Health Professions,3608.0,Medical Terminology,1
+Materials Science,2506.0,Metals and Alloys,1
+Health Professions,3603.0,Complementary and Manual Therapy,1
+Physics and Astronomy,3105.0,Instrumentation,1
+Social Sciences,3302.0,Archeology,1
+Social Sciences,3305.0,"Geography, Planning and Development",1
+Social Sciences,3311.0,Safety Research,1

@@ -1,0 +1,242 @@
+{
+  "run_at": "2026-11-08T09:51:18.109193+00:00",
+  "model": "claude-haiku-5-5",
+  "effort": "medium",
+  "dry_run": false,
+  "communities": 4,
+  "counts": {
+    "repaired": 1,
+    "valid_first_pass": 3
+  },
+  "reports": [
+    {
+      "community_id": 1,
+      "title": "COVID-19 symptoms, neuroinflammation, and brain injury after stroke conditioning",
+      "summary": "The findings cover COVID-19 symptoms in healthcare workers with positive and negative PCR tests, a network study linking COVID-19 to neuroinflammation and Alzheimer's-related pathways, and remote limb conditioning with brain injury after stroke in mice. In the healthcare worker study, cough, headache, sore throat, muscle pain and fever were temporarily more prevalent in positive-test participants, but other claims from the same paper record no effect for several of these symptoms, so that paper's pattern is mixed. The network study's claims all express an unclear direction at associational strength and do not conflict with the other papers. Press coverage was aligned for 8 claims and overstated for 3, namely two network-study claims (C5, C10) and the stroke conditioning claim (C3). The remaining 8 claims had no press match.",
+      "key_findings": [
+        {
+          "text": "In healthcare workers with positive PCR tests, cough, headache, sore throat, muscle pain and fever were temporarily more prevalent, and no increases were seen after 30 days.",
+          "claim_ids": [
+            "1b30b042a7a377b5",
+            "60eeab60590fb6c4",
+            "9c1dfb2b6de80c9f",
+            "9ea394b324a292eb",
+            "c6d2274ff9fd422b"
+          ]
+        },
+        {
+          "text": "Positive-test participants were associated with dyspnea and a reduced sense of taste and smell during follow-up.",
+          "claim_ids": [
+            "11fa44fe675aa575",
+            "6a21b16128ae8e45"
+          ]
+        },
+        {
+          "text": "The same healthcare worker paper also reports no effect of COVID-19 on fever, cough, headache, sore throat and muscle pain, which conflicts with its reports of increases in those symptoms.",
+          "claim_ids": [
+            "1c3068c2481398ea",
+            "3861a7586ffc161b",
+            "774d92a88ac5f8a1",
+            "818c117b6a2c2cac",
+            "e47ade336ed4e24a",
+            "c6d2274ff9fd422b",
+            "1b30b042a7a377b5"
+          ]
+        },
+        {
+          "text": "Remote postischemic limb conditioning is stated to reduce brain injury after stroke, and CCR2-deficient monocytes abolished this protection.",
+          "claim_ids": [
+            "7570fd671450e2df",
+            "e2bdffb7288410e5"
+          ]
+        },
+        {
+          "text": "The network study associates COVID-19 with neuroinflammation, brain microvascular injury, Alzheimer's disease and Alzheimer's biomarker expression, with the direction unclear.",
+          "claim_ids": [
+            "026bb4d33e942dd3",
+            "8412c8190a66bd1f",
+            "c0a14467886af68a",
+            "fe74e054721cb905"
+          ]
+        }
+      ],
+      "key_claim_ids": [
+        "026bb4d33e942dd3",
+        "11fa44fe675aa575",
+        "1b30b042a7a377b5",
+        "1c3068c2481398ea",
+        "3861a7586ffc161b",
+        "60eeab60590fb6c4",
+        "6a21b16128ae8e45",
+        "7570fd671450e2df",
+        "774d92a88ac5f8a1",
+        "818c117b6a2c2cac",
+        "8412c8190a66bd1f",
+        "9c1dfb2b6de80c9f",
+        "9ea394b324a292eb",
+        "c0a14467886af68a",
+        "c6d2274ff9fd422b",
+        "e2bdffb7288410e5",
+        "e47ade336ed4e24a",
+        "fe74e054721cb905"
+      ],
+      "stats": {
+        "claims": 18,
+        "claims_shown": 18,
+        "papers": 3,
+        "directions": {
+          "increase": 8,
+          "no_effect": 5,
+          "unclear": 4,
+          "decrease": 1
+        },
+        "strengths": {
+          "1": 11,
+          "0": 5,
+          "3": 2
+        },
+        "claims_with_press_match": 10,
+        "press_labels": {
+          "aligned": 8,
+          "overstated": 3
+        },
+        "retracted_papers": 0
+      }
+    },
+    {
+      "community_id": 2,
+      "title": "Long COVID associations with hypertension, dyspnoea, ventilation, age and sex",
+      "summary": "This community covers long COVID (post-COVID syndrome) and its associations with hypertension, dyspnoea, mechanical ventilation, age and sex, drawn from two papers. All five claims are correlational, stated as 'associated with' (strength 1), and all report an increase, so no findings conflict. The age and female sex finding appears under two exposure labels because the same P2 wording is listed twice. Of the five claims, three have a press match: the hypertension claim was overstated in press (press strength 2 vs paper strength 1), while the ventilation and age claims were aligned. The dyspnoea and female sex claims had no press match.",
+      "key_findings": [
+        {
+          "text": "Long COVID was associated with hypertension, with the paper noting that most individuals received this diagnosis before COVID-19; press coverage overstated this finding.",
+          "claim_ids": [
+            "0979f5e8f25bbe69"
+          ]
+        },
+        {
+          "text": "Women and older participants were associated with greater susceptibility to long-lasting COVID-19 symptoms.",
+          "claim_ids": [
+            "43ea8278ee20f0a4",
+            "6d3f8e6ba0e5f08c"
+          ]
+        },
+        {
+          "text": "Dyspnoea was associated with long COVID and was new to the majority of cases compared with controls.",
+          "claim_ids": [
+            "7a5991d31d273132"
+          ]
+        },
+        {
+          "text": "Mechanical ventilation during initial COVID-19 was associated with long COVID compared with no outpatient or inpatient contact.",
+          "claim_ids": [
+            "d7854e9bc9fe2098"
+          ]
+        }
+      ],
+      "key_claim_ids": [
+        "0979f5e8f25bbe69",
+        "43ea8278ee20f0a4",
+        "6d3f8e6ba0e5f08c",
+        "7a5991d31d273132",
+        "d7854e9bc9fe2098"
+      ],
+      "stats": {
+        "claims": 5,
+        "claims_shown": 5,
+        "papers": 2,
+        "directions": {
+          "increase": 5
+        },
+        "strengths": {
+          "1": 5
+        },
+        "claims_with_press_match": 3,
+        "press_labels": {
+          "aligned": 3,
+          "overstated": 1
+        },
+        "retracted_papers": 0
+      }
+    },
+    {
+      "community_id": 5,
+      "title": "Losartan and remote limb conditioning reduce brain edema",
+      "summary": "These two claims come from separate papers, one on losartan in NF2 mouse models and one on remote limb conditioning after stroke in mice, and both study brain edema as the outcome. Both papers state a direct causal decrease in edema, so they agree in direction. No conflicting results appear in this community. Press releases for both papers were aligned with the paper's strength, so no overstatement or understatement was recorded. Neither paper is retracted.",
+      "key_findings": [
+        {
+          "text": "Losartan is reported to directly reduce neuro-edema and brain edema in NF2 mouse models.",
+          "claim_ids": [
+            "0bf80d72baddc90d"
+          ]
+        },
+        {
+          "text": "Remote limb conditioning is reported to directly reduce brain edema after stroke in mice.",
+          "claim_ids": [
+            "5ff60eba9af31447"
+          ]
+        }
+      ],
+      "key_claim_ids": [
+        "0bf80d72baddc90d",
+        "5ff60eba9af31447"
+      ],
+      "stats": {
+        "claims": 2,
+        "claims_shown": 2,
+        "papers": 2,
+        "directions": {
+          "decrease": 2
+        },
+        "strengths": {
+          "3": 2
+        },
+        "claims_with_press_match": 2,
+        "press_labels": {
+          "aligned": 2
+        },
+        "retracted_papers": 0
+      }
+    },
+    {
+      "community_id": 7,
+      "title": "Motor function improvement after TFE3 overexpression or remote limb conditioning",
+      "summary": "These two papers study unrelated exposures, TFE3 overexpression in an alpha-synuclein Parkinson's model and remote postischemic limb conditioning after stroke, and share only the outcome of motor function. Both claims report an increase in motor function with direct causal wording, so the papers do not conflict. The TFE3 claim [C1] has no matched press statement. The remote conditioning claim [C2] has two matched press statements, labeled aligned and overstated. Neither paper is retracted.",
+      "key_findings": [
+        {
+          "text": "TFE3 overexpression is reported to restore motor function in an alpha-synuclein overexpression model of Parkinson's disease.",
+          "claim_ids": [
+            "b20b9176817fcfdd"
+          ]
+        },
+        {
+          "text": "Poststroke remote limb conditioning is reported to increase motor and gait function in chronic stroke, alongside a shift of circulating monocytes to a CCR2+ proinflammatory subset.",
+          "claim_ids": [
+            "3cd5ea8960607ca1"
+          ]
+        }
+      ],
+      "key_claim_ids": [
+        "3cd5ea8960607ca1",
+        "b20b9176817fcfdd"
+      ],
+      "stats": {
+        "claims": 2,
+        "claims_shown": 2,
+        "papers": 2,
+        "directions": {
+          "increase": 2
+        },
+        "strengths": {
+          "3": 2
+        },
+        "claims_with_press_match": 1,
+        "press_labels": {
+          "aligned": 1,
+          "overstated": 1
+        },
+        "retracted_papers": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+
+=== corpus-crawl (s1_corpus.s1d_crawl)
+6,756 ranked releases; 577 already have body text; target 500
+  rank 49: 47/500 with body text, 25 fetched
+  rank 75: 73/500 with body text, 50 fetched
+  rank 102: 100/500 with body text, 75 fetched
+  rank 128: 126/500 with body text, 100 fetched
+  rank 157: 155/500 with body text, 125 fetched
+  rank 184: 182/500 with body text, 150 fetched
+  rank 210: 208/500 with body text, 175 fetched
+  rank 236: 234/500 with body text, 200 fetched
+  rank 265: 263/500 with body text, 225 fetched
+  rank 293: 291/500 with body text, 250 fetched
+  rank 322: 320/500 with body text, 275 fetched
+  rank 348: 346/500 with body text, 300 fetched
+  rank 375: 373/500 with body text, 325 fetched
+  rank 400: 398/500 with body text, 350 fetched
+  rank 431: 429/500 with body text, 375 fetched
+  rank 458: 456/500 with body text, 400 fetched
+Traceback (most recent call last):
+  File "/home/joe/Desktop/study/ASU/6399 - Project/scoped_truth_discovery_v7/s1_corpus/s1d_crawl.py", line 233, in crawl
+sqlite3.OperationalError: attempt to write a readonly database
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/joe/Desktop/study/ASU/6399 - Project/scoped_truth_discovery_v7/run.py", line 96, in <module>
+  File "/home/joe/Desktop/study/ASU/6399 - Project/scoped_truth_discovery_v7/run.py", line 91, in main
+  File "<frozen runpy>", line 226, in run_module
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/joe/Desktop/study/ASU/6399 - Project/scoped_truth_discovery_v7/s1_corpus/s1d_crawl.py", line 267, in <module>
+  File "/home/joe/Desktop/study/ASU/6399 - Project/scoped_truth_discovery_v7/s1_corpus/s1d_crawl.py", line 259, in main
+  File "/home/joe/Desktop/study/ASU/6399 - Project/scoped_truth_discovery_v7/s1_corpus/s1d_crawl.py", line 238, in crawl
+sqlite3.OperationalError: attempt to write a readonly database

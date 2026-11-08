@@ -1,0 +1,82 @@
+{
+  "coverage": [
+    {
+      "semantic_type": "behavior",
+      "mentions": 11,
+      "linked": 2,
+      "pct_linked": 18.2
+    },
+    {
+      "semantic_type": "chemical_drug",
+      "mentions": 3,
+      "linked": 2,
+      "pct_linked": 66.7
+    },
+    {
+      "semantic_type": "disorder",
+      "mentions": 34,
+      "linked": 25,
+      "pct_linked": 73.5
+    },
+    {
+      "semantic_type": "other",
+      "mentions": 32,
+      "linked": 0,
+      "pct_linked": 0.0
+    },
+    {
+      "semantic_type": "physiology",
+      "mentions": 62,
+      "linked": 6,
+      "pct_linked": 9.7
+    },
+    {
+      "semantic_type": "procedure",
+      "mentions": 7,
+      "linked": 1,
+      "pct_linked": 14.3
+    },
+    {
+      "semantic_type": "TOTAL",
+      "mentions": 149,
+      "linked": 36,
+      "pct_linked": 24.2
+    }
+  ],
+  "linked_by_kind": {
+    "Disease": 11,
+    "Symptom": 10,
+    "Mental Process": 5,
+    "Side Effect": 4,
+    "Anatomy": 1,
+    "Compound": 1,
+    "Drug Class": 1,
+    "Procedure": 1,
+    "Physiology": 1,
+    "Behavior": 1
+  },
+  "by_method": {
+    "llm_nil": 60,
+    "not_in_vocab": 32,
+    "no_candidates": 21,
+    "exact_lexicon": 19,
+    "llm_select": 17
+  },
+  "linked_by_source_prefix": {
+    "MESH": 21,
+    "DOID": 10,
+    "UMLS": 4,
+    "DRUGBANK": 1
+  },
+  "ontology_ids_used": 32,
+  "ids_shared_by_2plus_papers": 6,
+  "score_llm": {
+    "statements": 79,
+    "matched": 56,
+    "labels": {
+      "aligned": 40,
+      "overstated": 13,
+      "understated": 3
+    }
+  }
+}

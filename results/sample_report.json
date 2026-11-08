@@ -1,0 +1,119 @@
+{
+  "scope": {
+    "fields": [
+      "Medicine",
+      "Neuroscience"
+    ],
+    "subfields": [
+      2728,
+      2738,
+      2717,
+      2805,
+      2802,
+      2803,
+      2808
+    ],
+    "topics": [],
+    "year_min": 2018,
+    "year_max": null
+  },
+  "sample_size": 20,
+  "seed": 42,
+  "funnel": [
+    [
+      "releases in the database (2018+, with DOI, from the ETL)",
+      152754
+    ],
+    [
+      "DOI matched in papers",
+      152610
+    ],
+    [
+      "field in ['Medicine', 'Neuroscience']",
+      42274
+    ],
+    [
+      "+ has release title",
+      42274
+    ],
+    [
+      "+ has release date",
+      42274
+    ],
+    [
+      "+ has paper title",
+      42274
+    ],
+    [
+      "+ has paper publication date",
+      42274
+    ],
+    [
+      "+ has journal",
+      42230
+    ],
+    [
+      "+ has authors",
+      42197
+    ],
+    [
+      "unique releases",
+      42197
+    ],
+    [
+      "release year 2018-latest",
+      42197
+    ],
+    [
+      "OpenAlex topic known",
+      42090
+    ],
+    [
+      "subfields [2717, 2728, 2738, 2802, 2803, 2805, 2808] (Geriatrics and Gerontology; Clinical Neurology; Psychiatry and Mental health; Behavioral Neuroscience; Biological Psychiatry; Cognitive Neuroscience; Neurology)",
+      6756
+    ],
+    [
+      "ranked in seeded order (seed 42)",
+      6756
+    ],
+    [
+      "crawled in rank order (examined)",
+      22
+    ],
+    [
+      "abstracts judged (releases with press body text)",
+      22
+    ],
+    [
+      "  no usable abstract after backfill (skipped; next rank took the place)",
+      2
+    ],
+    [
+      "study sample: first 20 with body text and a usable abstract",
+      20
+    ]
+  ],
+  "sample_by_subfield": {
+    "Cognitive Neuroscience": 9,
+    "Clinical Neurology": 9,
+    "Psychiatry and Mental health": 1,
+    "Neurology": 1
+  },
+  "sample_by_year": {
+    "2018": 4,
+    "2019": 5,
+    "2020": 2,
+    "2021": 4,
+    "2022": 1,
+    "2023": 2,
+    "2024": 2
+  },
+  "retracted_papers": 0,
+  "with_pmcid": 14,
+  "abstract_chosen_by_source": {
+    "corpus": 1,
+    "pmc": 13,
+    "pubmed": 6
+  },
+  "crossref_checked": 20
+}
