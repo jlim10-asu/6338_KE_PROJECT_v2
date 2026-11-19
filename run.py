@@ -34,6 +34,7 @@ STAGES = {  # name: (module, what it does)
     "anchor": ("s7_analysis.s7a_anchor", "broader anchors for unlinked mentions + ANCHORED_TO edges (LLM); never merges"),
     "communities": ("s7_analysis.s7b_communities", "Leiden communities over shared entities + weighted anchors (GDS)"),
     "summaries": ("s7_analysis.s7c_summaries", "one report per community (LLM)"),
+    "embed": ("s8_qa.s8a_embed", "vector indexes for question answering (statements, claims, entities, communities)"),
     "reset": ("s6_graph.reset", "clear derived tables and graph data; keeps ontology, LLM cache, abstracts"),
 }
 GROUPS = {
@@ -42,8 +43,9 @@ GROUPS = {
     "setup": ["schema", "doid", "hetionet", "mesh", "cogat"],
     "pipeline": ["units", "extract", "ned", "score", "load", "verify"],
     "analysis": ["anchor", "communities", "summaries", "verify"],
+    "qa": ["embed"],                                                 # then: python ask.py "..." / python eval/eval_qa.py
 }
-GROUPS["all"] = GROUPS["setup"] + GROUPS["pipeline"][:-1] + GROUPS["analysis"]
+GROUPS["all"] = GROUPS["setup"] + GROUPS["pipeline"][:-1] + GROUPS["analysis"] + GROUPS["qa"]
 
 
 def stage_id(name):

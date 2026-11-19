@@ -13,7 +13,9 @@ Writes the anchors table, ANCHORED_TO edges and results/anchor_summary.json. Men
 """
 import json
 from collections import Counter
+import config
 from config import ANCHOR_MIN_DEPTH, ANCHOR_STOPLIST, LLM_MODEL, NED_CANDIDATES, NED_KINDS_BY_TYPE, NEO4J_DB, RESULTS
+ANCHOR_MIN_CONFIDENCE = getattr(config, "ANCHOR_MIN_CONFIDENCE", 0.6)  # edges below this stay in the anchors table only
 from core.db import db, driver, run_batches
 from core.llm import LLMStop, llm_json
 from core.text import lucene_escape, norm
@@ -77,7 +79,7 @@ for key, mention, stype in todo:
 driver.execute_query("MATCH ()-[a:ANCHORED_TO]->() DELETE a", database_=NEO4J_DB)
 edges = [dict(zip(("entity", "anchor_id", "confidence", "method", "model_id"), r)) for r in db.execute(
     """SELECT n.canonical_name, a.anchor_id, a.confidence, a.method, a.model_id FROM anchors a
-       JOIN ned n USING (mention_key) WHERE a.anchor_id IS NOT NULL""")]
+       JOIN ned n USING (mention_key) WHERE a.anchor_id IS NOT NULL AND a.confidence >= ?""", (ANCHOR_MIN_CONFIDENCE,))]
 run_batches("""
 UNWIND $rows AS r
 MATCH (m:MedicalEntity {canonical_name: r.entity}), (o:OntologyTerm {id: r.anchor_id})
@@ -87,6 +89,9 @@ SET a.link_type = 'broader', a.confidence = r.confidence, a.method = r.method, a
 written = driver.execute_query("MATCH ()-[a:ANCHORED_TO]->() RETURN count(a) AS n", database_=NEO4J_DB)[0][0]["n"]
 
 summary = {"run": dict(stats), "cleared_by_stoplist": cleared, "edges_written": written,
+           "min_confidence": ANCHOR_MIN_CONFIDENCE,
+           "below_cutoff": db.execute("SELECT count(*) FROM anchors WHERE anchor_id IS NOT NULL AND confidence < ?",
+                                      (ANCHOR_MIN_CONFIDENCE,)).fetchone()[0],
            "by_method": dict(db.execute("SELECT method, count(*) FROM anchors GROUP BY method").fetchall()),
            "anchored_by_type": dict(db.execute("SELECT semantic_type, count(*) FROM anchors WHERE anchor_id IS NOT NULL GROUP BY 1").fetchall()),
            "anchored_by_kind": dict(db.execute("SELECT anchor_kind, count(*) FROM anchors WHERE anchor_id IS NOT NULL GROUP BY 1").fetchall()),

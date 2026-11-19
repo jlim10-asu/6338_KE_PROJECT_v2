@@ -145,7 +145,7 @@
       },
       {
         "type": "GROUNDS_IN",
-        "n": 56
+        "n": 57
       },
       {
         "type": "DISAMBIGUATED_TO",
@@ -153,11 +153,7 @@
       },
       {
         "type": "IN_COMMUNITY",
-        "n": 27
-      },
-      {
-        "type": "ANCHORED_TO",
-        "n": 23
+        "n": 25
       },
       {
         "type": "ISSUED_BY",
@@ -170,6 +166,10 @@
       {
         "type": "CHUNK_OF",
         "n": 20
+      },
+      {
+        "type": "ANCHORED_TO",
+        "n": 16
       }
     ]
   },
@@ -261,23 +261,17 @@
         "entity_type": "physiology",
         "anchor_kind": "Mental Process",
         "exact": false,
-        "n": 9
+        "n": 6
       },
       {
         "entity_type": "procedure",
         "anchor_kind": "Procedure",
         "exact": false,
-        "n": 4
+        "n": 3
       },
       {
         "entity_type": "disorder",
         "anchor_kind": "Disease",
-        "exact": false,
-        "n": 4
-      },
-      {
-        "entity_type": "behavior",
-        "anchor_kind": "Mental Process",
         "exact": false,
         "n": 3
       },
@@ -290,6 +284,12 @@
       {
         "entity_type": "physiology",
         "anchor_kind": "Anatomy",
+        "exact": false,
+        "n": 1
+      },
+      {
+        "entity_type": "behavior",
+        "anchor_kind": "Mental Process",
         "exact": false,
         "n": 1
       }
@@ -309,28 +309,13 @@
         "entities": 2
       },
       {
-        "id": "COGAT:trm_559f0a129c136",
-        "anchor": "response bias",
-        "entities": 1
-      },
-      {
         "id": "MESH:D001143",
         "anchor": "Arousal",
         "entities": 1
       },
       {
-        "id": "MESH:D012890",
-        "anchor": "Sleep",
-        "entities": 1
-      },
-      {
         "id": "MESH:D003700",
         "anchor": "Delta Rhythm",
-        "entities": 1
-      },
-      {
-        "id": "MESH:D000161",
-        "anchor": "Acoustic Stimulation",
         "entities": 1
       },
       {
@@ -344,8 +329,23 @@
         "entities": 1
       },
       {
+        "id": "MESH:D019194",
+        "anchor": "Ischemic Preconditioning",
+        "entities": 1
+      },
+      {
+        "id": "MESH:D012890",
+        "anchor": "Sleep",
+        "entities": 1
+      },
+      {
         "id": "COGAT:trm_502403240a2a2",
         "anchor": "reinstatement",
+        "entities": 1
+      },
+      {
+        "id": "MESH:D009412",
+        "anchor": "Nerve Fibers",
         "entities": 1
       }
     ]
@@ -378,12 +378,12 @@
       {
         "status": "resolved",
         "reason": "-",
-        "n": 56
+        "n": 57
       },
       {
         "status": "unresolved",
         "reason": "llm_none",
-        "n": 15
+        "n": 14
       },
       {
         "status": "unresolved",
@@ -403,7 +403,7 @@
       {
         "label": "aligned",
         "method": "llm",
-        "n": 25
+        "n": 33
       },
       {
         "label": "aligned",
@@ -413,12 +413,12 @@
       {
         "label": "overstated",
         "method": "llm",
-        "n": 13
+        "n": 5
       },
       {
         "label": "understated",
         "method": "llm",
-        "n": 3
+        "n": 4
       }
     ]
   },
@@ -427,9 +427,9 @@
     "rows": [
       {
         "mode": "llm",
-        "grounds_in": 56,
-        "rerated": 21,
-        "null_reframed": 0
+        "grounds_in": 57,
+        "rerated": 14,
+        "null_reframed": 1
       }
     ]
   },
@@ -437,22 +437,13 @@
     "query": "MATCH (s:Statement)-[g:GROUNDS_IN {exaggeration_label: 'overstated'}]->(c:ScientificClaim)\nRETURN s.euid AS release, s.e",
     "rows": [
       {
-        "release": "789120",
-        "press_wording": "Cutting off and then restoring blood supply to a limb following a stroke reduces tissue damage and swelling and improves functional recovery, according to a new study in mice published in JNeurosci.",
-        "paper_wording": "We observed that mice subjected to poststroke RLC shifted circulating monocytes to a CCR2+ proinflammatory monocyte subset and had reduced acute brain injury, swelling, and improved motor/gait function in chronic stroke.",
+        "release": "798073",
+        "press_wording": "\"We discovered that SARS-CoV-2 infection significantly altered Alzheimer's markers implicated in brain inflammation and that certain viral entry factors are highly expressed in cells in the blood-brain barrier,\" explained Dr. Cheng.",
+        "paper_wording": "Our results suggest significant mechanistic overlap between AD and COVID-19, centered on neuroinflammation and microvascular injury.",
         "press_strength": 3,
         "paper_strength": 1,
         "method": "llm",
-        "explanation": "The press statement reports that limb blood-supply cycling reduces brain tissue damage in mice, which matches candidate 1's reduced acute brain injury after poststroke conditioning; candidate 2 covers swelling and candidate 3 covers motor function. The press wording 'reduces' is direct causal (3), while the abstract's 'had reduced acute brain injury' is a reported observation without causal framing, so I rate it 1 as the nearest correlational-style wording."
-      },
-      {
-        "release": "822151",
-        "press_wording": "\"In emotional situations, the lateral preference shifts to the right,\" describes Packheiser.",
-        "paper_wording": "However, emotional context also affects side biases, most strongly for embracing.",
-        "press_strength": 3,
-        "paper_strength": 1,
-        "method": "llm",
-        "explanation": "Candidate 2 reports the same finding: emotional context affects side biases in social touch, most strongly for embracing, matching the press claim that the lateral preference shifts in emotional situations. The press statement asserts a shift directly ('shifts to the right') while candidate 2 says only that emotional context 'also affects' side biases, which is a non-directional, correlational-type claim, so the press wording is stronger and gains a direction."
+        "explanation": "The press statement reports that SARS-CoV-2 infection altered Alzheimer's markers implicated in brain inflammation, which best matches candidate 3's mechanistic overlap between AD and COVID-19 centred on neuroinflammation, though candidate 1 also covers the neuroinflammation relationship. The press wording 'significantly altered' is a causal-sounding change claim, while candidate 3 says 'suggest significant mechanistic overlap' (correlational, hedged, not causal) and candidate 1 says 'significant network-based relationships' (correlational)."
       },
       {
         "release": "857697",
@@ -461,7 +452,7 @@
         "press_strength": 3,
         "paper_strength": 1,
         "method": "llm",
-        "explanation": "Candidate 3 reports the same finding: tumor-derived IL-6 reduced viability of cochlear cells, which matches the press statement's claim that inflammatory signaling damaged cochlear cells. The press wording 'capable of directly damaging' is direct causal (3), while candidate 3's 'was associated with reduced viability' is correlational (1), though the ex vivo culture design is a mechanistic setting, not a rating basis."
+        "explanation": "Candidate 3 reports the same finding: tumor-derived IL-6 reduces viability of cochlear sensory cells, which matches the press statement's claim that inflammatory signaling damaged cochlear cells. The press wording 'was capable of directly damaging' is direct causal (3), while candidate 3's 'was associated with reduced viability' is correlational (1) in the ex vivo setting."
       },
       {
         "release": "798073",
@@ -470,67 +461,38 @@
         "press_strength": 2,
         "paper_strength": 1,
         "method": "llm",
-        "explanation": "Candidate 1 reports the same finding: APOE E4/E4 individuals showing reduced antiviral defense gene expression. The press statement's original wording says 'had decreased expression' (a plain finding, correlational-level assertion of a difference) and adds 'could make these patients more susceptible,' which is a conditional causal extension, while candidate 1 says 'displayed reduced expression' with no causal language."
+        "explanation": "Candidate 1 reports the same finding: APOE E4/E4 individuals show reduced antiviral defense gene expression. The press wording 'had decreased expression' is a plain observed-difference statement, but the added 'which could make these patients more susceptible to COVID-19' is a hedged causal inference, so the press statement is rated 2 (hedge plus causal verb 'make'). The candidate's 'displayed reduced expression' is a direct description of a comparison result with no hedge or causal verb, so it is rated 1 at most; it carries no causal claim, so I rate it 1 as a correlational comparison."
       },
       {
-        "release": "789120",
-        "press_wording": "The symptoms improved for both moderate and severe strokes, indicating the potential for wide application as a stroke treatment.",
-        "paper_wording": "We observed that mice subjected to poststroke RLC shifted circulating monocytes to a CCR2+ proinflammatory monocyte subset and had reduced acute brain injury, swelling, and improved motor/gait function in chronic stroke.",
-        "press_strength": 2,
-        "paper_strength": 1,
-        "method": "llm",
-        "explanation": "The press statement says symptoms improved for moderate and severe strokes after remote ischemic limb conditioning, which is closest to candidate 1's improved motor and gait function in chronic stroke, though the press wording is about symptoms in both stroke severities and the candidate is about motor/gait function. The press original wording 'indicating the potential for wide application' is conditional-causal (2) with 'symptoms improved' as the outcome claim, while candidate 1's 'improved motor/gait function' is stated as a plain finding of the study, rated 1 because it is a descriptive observation of improvement without causal verbs."
-      },
-      {
-        "release": "798073",
-        "press_wording": "June 10, 2021, CLEVELAND: A new Cleveland Clinic-led study has identified mechanisms by which COVID-19 can lead to Alzheimer's disease-like dementia.",
-        "paper_wording": "We found significant network-based relationships between COVID-19 and neuroinflammation and brain microvascular injury pathways and processes which are implicated in AD.",
-        "press_strength": 2,
-        "paper_strength": 1,
-        "method": "llm",
-        "explanation": "The press statement says a study identified mechanisms by which COVID-19 can lead to AD-like dementia; candidate 2 reports network-based relationships between COVID-19 and neuroinflammation and microvascular injury pathways implicated in AD, the closest mechanistic finding, though candidate 1 states mechanistic overlap and candidate 3 is a near-duplicate subset. The press wording 'can lead to' is conditional causal (2), while the abstract wordings 'suggest overlap' and 'found relationships' are correlational or hedged (1 at most, rated 1 for 'found significant relationships')."
-      },
-      {
-        "release": "789120",
-        "press_wording": "The research team found that the ratio of inflammatory to non-inflammatory monocytes circulating in the blood increased, resulting in more available inflammatory cells.",
-        "paper_wording": "We observed that mice subjected to poststroke RLC shifted circulating monocytes to a CCR2+ proinflammatory monocyte subset and had reduced acute brain injury, swelling, and improved motor/gait function in chronic stroke.",
-        "press_strength": 2,
-        "paper_strength": 1,
-        "method": "llm",
-        "explanation": "Candidate 1 reports the same finding: RLC shifted circulating monocytes toward the CCR2+ proinflammatory subset, which the press statement describes as a rise in the inflammatory-to-non-inflammatory monocyte ratio. The press wording 'increased' and 'resulting in' is a causal-style verb, while candidate 1 says 'shifted' with no explicit causal or associational verb, so I rate candidate 1 as correlational-to-neutral at 1 and the press statement as 2 for its 'resulting in' causal framing, with both directions increase."
-      },
-      {
-        "release": "895310",
-        "press_wording": "\"There is extensive evidence that color, size, orientation, and motion are the most efficient features for guiding a human's attention. We found the same universal features will also make a target pop out against a busy background for animals with very different brain anatomies and living environments,\" says Professor Ohad Ben-Shahar, the chair of BGU's Department of Computer Science.",
-        "paper_wording": "Given earlier observations that moving targets elicit pop-out and parallel search in the archerfish during visual-search tasks, here we investigate and confirm that all four of these visual features also facilitate efficient search in the archerfish in a manner comparable to humans.",
+        "release": "822151",
+        "press_wording": "\"In emotional situations, the lateral preference shifts to the right,\" describes Packheiser.",
+        "paper_wording": "However, emotional context also affects side biases, most strongly for embracing.",
         "press_strength": 3,
         "paper_strength": 2,
         "method": "llm",
-        "explanation": "The press statement says orientation makes a target pop out for archerfish, and candidate 1 reports that all four features, including orientation, facilitate efficient search in archerfish; candidates 2 and 3 name motion and color, which are different features. Candidate 1's wording 'facilitate' is conditional causal (2) rather than direct causal, while the press statement's 'will also make a target pop out' is a direct causal claim (3), so the press statement is stronger."
+        "explanation": "The press statement reports that in emotional situations the lateral preference shifts to the right; candidate 2 reports that emotional context affects side biases in social touch, most strongly for embracing, which is the same emotion-to-laterality finding but without the stated direction, so it is the closest match. The press quote states a directional shift as fact ('shifts to the right', no hedge, so strength 1 at most as a causal-free claim, rated 2 for an unhedged directional effect is not supported), while candidate 2 uses 'affects' which is a causal-leaning verb without a hedge and is rated 2 for conditional causal wording with a hedge-free causal verb."
       },
       {
-        "release": "1075445",
-        "press_wording": "By doing so, TFE3 not only prevents the accumulation of damaged mitochondria but also fosters mitochondrial biogenesis by upregulating PGC1-alpha and TFAM, critical regulators of energy metabolism and cellular health.",
-        "paper_wording": "TFE3 overexpression also reversed the down-regulation of Parkin, promoting the clearance of accumulated mitochondria, and restored the expression of PGC1-\u03b1 and TFAM, thereby enhancing mitochondrial biogenesis in the adeno-associated virus-\u03b1-Syn model.",
+        "release": "756185",
+        "press_wording": "From those results, the researchers conclude that knowledge - whether it's about health, law, history or anything else - doesn't have to be tested to be remembered, if it's closely intertwined with knowledge that is being tested.",
+        "paper_wording": "The benefit of mentally retrieving information from studied material appears to facilitate the retrieval of information that was studied without being tested.",
         "press_strength": 3,
         "paper_strength": 2,
         "method": "llm",
-        "explanation": "The press statement says TFE3 prevents accumulation of damaged mitochondria; candidate 2 reports promoting clearance of accumulated mitochondria in the same model, which is the closest match even though it is a reversal framing rather than prevention. Candidate 2's wording 'promoting the clearance' is correlational-to-causal but reads as a mechanistic promotion, rated 2 as conditional causal, while the press 'prevents' is direct causal, rated 3."
-      },
-      {
-        "release": "1039084",
-        "press_wording": "High blood pressure also appears to be a risk factor for PCS diagnosis, according to the study\u2019s findings.",
-        "paper_wording": "Hypertension associated with PCS cohort (26.61%) than in COVID-19-negative (OR 17.16, 95% CI 15.23 to 19.3) and COVID-19-positive (OR 9.25, 95% CI 8.41 to 10.16) controls, although most individuals received this diagnosis before COVID-19.",
-        "press_strength": 2,
-        "paper_strength": 1,
-        "method": "llm",
-        "explanation": "Candidate 1 reports the same finding: hypertension as a factor associated with PCS diagnosis, compared with controls. The press statement says 'appears to be a risk factor' (hedged, conditional causal), while candidate 1 only reports hypertension being more common in the PCS cohort (correlational, no causal verb), so the press release overstates the association as a risk factor."
+        "explanation": "Candidate 1 reports the same finding: retrieving related studied material facilitates recall of material studied without testing, which is the spillover the press statement describes. The press statement asserts this unhedged ('researchers conclude', 'doesn't have to be tested'), so it rates 3, while candidate 1 uses 'appears to facilitate', a hedge with a causal verb, so it rates 2."
       }
     ]
   },
   {
     "query": "MATCH (s:Statement)-[g:GROUNDS_IN {null_reframed: true}]->(c:ScientificClaim)\nRETURN s.euid AS release, s.evidence_span ",
-    "rows": []
+    "rows": [
+      {
+        "release": "857697",
+        "press_wording": "Also, patients with vestibular schwannoma who took losartan or other drugs in its class experienced no progression in hearing loss, unlike patients on other or no antihypertensive drugs.",
+        "paper_wording": "In preparation to translate these exciting findings into the clinic, we used patient samples and data and demonstrated that IL-6/STAT3 signaling inversely associated with hearing function, that elevated production of tumor-derived IL-6 was associated with reduced viability of cochlear sensory cells and neurons in ex vivo organotypic cochlear cultures, and that patients receiving angiotensin receptor blockers have no progression in VS-induced hearing loss compared with patients on other or no antihypertensives based on a retrospective analysis of patients with VS and hypertension.",
+        "explanation": "Candidate 2 reports the same finding: angiotensin receptor blocker users with vestibular schwannoma show no progression of hearing loss compared with other or no antihypertensives. The press statement's original wording 'experienced no progression in hearing loss' is a null result framed as a benefit, and candidate 2 wording 'have no progression' is also null (strength 0), so the press release does not strengthen the claim in scale terms but reframes it as a benefit."
+      }
+    ]
   },
   {
     "query": "MATCH (k:Community)<-[:IN_COMMUNITY]-(c:ScientificClaim)\nWITH k, count(c) AS n WHERE n < 2 RETURN 'community_below_min_s",
@@ -545,9 +507,9 @@
     "rows": [
       {
         "communities": 4,
-        "claims": 27,
+        "claims": 25,
         "min_size": 2,
-        "max_size": 18,
+        "max_size": 16,
         "multi_paper": 4
       }
     ]

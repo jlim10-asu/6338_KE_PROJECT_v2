@@ -26,7 +26,7 @@ q("MATCH (k:Community) DETACH DELETE k")
 
 # 1. Project claim -- claim edges weighted by shared entities plus shared anchors (undirected; each pair emitted once)
 proj = q("""
-CALL {
+CALL () {
   MATCH (a:ScientificClaim)-[:HAS_EXPOSURE|HAS_OUTCOME]->(m:MedicalEntity)<-[:HAS_EXPOSURE|HAS_OUTCOME]-(b:ScientificClaim)
   WHERE elementId(a) < elementId(b) AND NOT toLower(m.canonical_name) IN $exclude
   RETURN a, b, toFloat(count(DISTINCT m)) AS w

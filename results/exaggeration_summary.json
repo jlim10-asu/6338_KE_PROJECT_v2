@@ -1,6 +1,6 @@
 {
-  "run_id": "ff003b4abc2d",
-  "run_at": "2026-11-08T08:24:55.999136+00:00",
+  "run_id": "0fc12ed71718",
+  "run_at": "2026-11-19T22:39:18.350927+00:00",
   "active_mode": "llm",
   "embed_model": "sentence-transformers/all-MiniLM-L6-v2",
   "embed": {
@@ -37,35 +37,35 @@
     "top_k": 3,
     "floor": 0.4,
     "statements": 79,
-    "resolved": 56,
-    "resolved_rate": 0.709,
+    "resolved": 57,
+    "resolved_rate": 0.722,
     "by_method": {
-      "llm": 41,
+      "llm": 42,
       "llm_entity": 15
     },
     "unresolved_by_reason": {
-      "llm_none": 15,
+      "llm_none": 14,
       "no_finding": 5,
       "no_candidates": 3
     },
     "labels": {
-      "aligned": 40,
-      "overstated": 13,
-      "understated": 3
+      "aligned": 48,
+      "overstated": 5,
+      "understated": 4
     },
-    "mean_strength_delta": 0.214,
-    "rerated_vs_extraction": 21,
-    "null_reframed": 0,
-    "direction_conflicts": 1,
+    "mean_strength_delta": 0.035,
+    "rerated_vs_extraction": 14,
+    "null_reframed": 1,
+    "direction_conflicts": 0,
     "releases_scored": 15,
-    "releases_with_overstatement": 9,
+    "releases_with_overstatement": 4,
     "retracted_source_matches": 0
   },
   "comparison": {
     "both_resolved": 33,
-    "same_claim": 30,
-    "same_label": 24,
+    "same_claim": 31,
+    "same_label": 27,
     "embed_only": 4,
-    "llm_only": 23
+    "llm_only": 24
   }
 }

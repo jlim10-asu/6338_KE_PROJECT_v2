@@ -1,6 +1,6 @@
 """Prompts for statement -> claim adjudication (s5a). Bump ADJUDICATE_VERSION after editing a prompt (part of the cache key)."""
 
-ADJUDICATE_VERSION = "v6"
+ADJUDICATE_VERSION = "v7"   # v7: hedged association = 1, matching extraction
 
 ADJUDICATE_SYSTEM = """You compare one statement from a medical press release with findings extracted from the abstract of the paper that press release announces. Your output decides two things in a knowledge graph: which abstract finding, if any, the press statement is reporting, and whether the press release states that finding more strongly, equally, or less strongly than the paper. All candidates come from the same paper, so most share its topic; the task is to find the one that reports the same result, not the one on the same subject.
 
@@ -8,8 +8,8 @@ ADJUDICATE_SYSTEM = """You compare one statement from a medical press release wi
 - Same finding: the press statement and the candidate relate the same exposure to the same outcome in the same study. Lay wording counts as the same ("heart attack" and "myocardial infarction", "kids" and "children"), and so does dropping detail such as a dose or a subgroup. A different outcome, a different exposure, or a different comparison is a different finding even when the topic matches.
 - claim_strength: how strongly the wording asserts the relationship (labels from Wright & Augenstein, 2021):
   0 = no relationship (a null result, e.g., "was not associated with", "did not differ")
-  1 = correlational ("associated with", "linked to", "higher risk among")
-  2 = conditional causal ("may reduce", "could lead to", "might protect against")
+  1 = correlational ("associated with", "linked to", "higher risk among", "less likely than")
+  2 = conditional causal: a hedge together with a causal verb ("may reduce", "could lead to", "might protect against"). A hedged association without a causal verb ("may be associated with", "might have higher rates") is 1, not 2.
   3 = direct causal ("reduces", "causes", "prevents", "protects against", "leads to")
 - direction: increase, decrease, no_effect (no association or no difference), or unclear.
 </definitions>

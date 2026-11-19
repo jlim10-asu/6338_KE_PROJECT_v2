@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-08T09:51:17.334858+00:00",
+  "run_at": "2026-11-19T22:40:53.271636+00:00",
   "algorithm": "gds.leiden.write",
   "min_size": 2,
   "seed": 42,
@@ -18,32 +18,32 @@
   ],
   "anchor_weight": 0.5,
   "projection": {
-    "claims_with_shared_entity": 27,
-    "claim_pairs": 116
+    "claims_with_shared_entity": 25,
+    "claim_pairs": 112
   },
   "leiden": {
     "communityCount": 4,
-    "modularity": 0.24930747922437677,
+    "modularity": 0.25318877551020413,
     "ranLevels": 2,
     "didConverge": true,
-    "nodePropertiesWritten": 27
+    "nodePropertiesWritten": 25
   },
   "communities_written": 4,
   "claims_total": 92,
-  "claims_in_community": 27,
-  "claims_unassigned": 65,
+  "claims_in_community": 25,
+  "claims_unassigned": 67,
   "size_min_max_mean": [
     2,
-    18,
-    6.75
+    16,
+    6.25
   ],
   "multi_paper_communities": 4,
   "communities_below_min_size": 0,
   "top_communities": [
     {
       "community_id": 1,
-      "claims": 18,
-      "papers": 3,
+      "claims": 16,
+      "papers": 2,
       "top_entities": [
         "COVID-19",
         "taste and smell dysfunction",
@@ -54,13 +54,10 @@
         "muscle pain",
         "Myalgia"
       ],
-      "top_anchors": [
-        "Brain Injuries",
-        "Ischemic Preconditioning"
-      ]
+      "top_anchors": []
     },
     {
-      "community_id": 2,
+      "community_id": 3,
       "claims": 5,
       "papers": 2,
       "top_entities": [
@@ -84,7 +81,6 @@
         "remote ischemic limb conditioning"
       ],
       "top_anchors": [
-        "Motor Skills",
         "Ischemic Preconditioning"
       ]
     },

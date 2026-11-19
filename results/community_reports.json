@@ -1,62 +1,58 @@
 {
-  "run_at": "2026-11-08T09:51:18.109193+00:00",
+  "run_at": "2026-11-19T22:40:53.805978+00:00",
   "model": "claude-haiku-5-5",
   "effort": "medium",
   "dry_run": false,
   "communities": 4,
   "counts": {
-    "repaired": 1,
-    "valid_first_pass": 3
+    "valid_first_pass": 3,
+    "repaired": 1
   },
   "reports": [
     {
       "community_id": 1,
-      "title": "COVID-19 symptoms, neuroinflammation, and brain injury after stroke conditioning",
-      "summary": "The findings cover COVID-19 symptoms in healthcare workers with positive and negative PCR tests, a network study linking COVID-19 to neuroinflammation and Alzheimer's-related pathways, and remote limb conditioning with brain injury after stroke in mice. In the healthcare worker study, cough, headache, sore throat, muscle pain and fever were temporarily more prevalent in positive-test participants, but other claims from the same paper record no effect for several of these symptoms, so that paper's pattern is mixed. The network study's claims all express an unclear direction at associational strength and do not conflict with the other papers. Press coverage was aligned for 8 claims and overstated for 3, namely two network-study claims (C5, C10) and the stroke conditioning claim (C3). The remaining 8 claims had no press match.",
+      "title": "COVID-19 symptoms, taste loss, and Alzheimer's-related brain mechanisms",
+      "summary": "This community links COVID-19 to symptoms and taste or smell dysfunction in one healthcare-worker cohort (P1) and to brain microvascular injury, neuroinflammation, and Alzheimer's-related biomarkers in a network medicine study (P2). In P1, positive-test participants had temporarily more cough, headache, sore throat, muscle pain, and fever, with no increases after 30 days, and taste and smell dysfunction was associated with a positive test across all 90 days. P1 also reports no association found for several of these same symptoms, such as fever and headache, so its claims are mixed for those symptoms. P2 reports associations between COVID-19 and neuroinflammation, microvascular injury, and Alzheimer's biomarkers, and press coverage overstated its Alzheimer's link. Across the community, press coverage aligned with the paper for seven of the eight matched claims, with one overstatement.",
       "key_findings": [
         {
-          "text": "In healthcare workers with positive PCR tests, cough, headache, sore throat, muscle pain and fever were temporarily more prevalent, and no increases were seen after 30 days.",
+          "text": "In P1, positive-test participants were associated with temporarily higher cough, headache, sore throat, muscle pain, and fever, with no increases seen after 30 days.",
           "claim_ids": [
-            "1b30b042a7a377b5",
             "60eeab60590fb6c4",
             "9c1dfb2b6de80c9f",
             "9ea394b324a292eb",
-            "c6d2274ff9fd422b"
-          ]
-        },
-        {
-          "text": "Positive-test participants were associated with dyspnea and a reduced sense of taste and smell during follow-up.",
-          "claim_ids": [
-            "11fa44fe675aa575",
-            "6a21b16128ae8e45"
-          ]
-        },
-        {
-          "text": "The same healthcare worker paper also reports no effect of COVID-19 on fever, cough, headache, sore throat and muscle pain, which conflicts with its reports of increases in those symptoms.",
-          "claim_ids": [
-            "1c3068c2481398ea",
-            "3861a7586ffc161b",
-            "774d92a88ac5f8a1",
-            "818c117b6a2c2cac",
-            "e47ade336ed4e24a",
             "c6d2274ff9fd422b",
             "1b30b042a7a377b5"
           ]
         },
         {
-          "text": "Remote postischemic limb conditioning is stated to reduce brain injury after stroke, and CCR2-deficient monocytes abolished this protection.",
+          "text": "In P1, COVID-19 positivity was associated with reduced taste and smell in about 30% of positive-test participants during all 90 days.",
           "claim_ids": [
-            "7570fd671450e2df",
-            "e2bdffb7288410e5"
+            "6a21b16128ae8e45"
           ]
         },
         {
-          "text": "The network study associates COVID-19 with neuroinflammation, brain microvascular injury, Alzheimer's disease and Alzheimer's biomarker expression, with the direction unclear.",
+          "text": "In P1, COVID-19 positivity was associated with dyspnea that declined over time but never reached the level seen in negative-test participants.",
+          "claim_ids": [
+            "11fa44fe675aa575"
+          ]
+        },
+        {
+          "text": "In P1, no association found was reported for fever, headache, cough, sore throat, or muscle pain in some claims, conflicting with the temporary increases for the same symptoms.",
+          "claim_ids": [
+            "1c3068c2481398ea",
+            "774d92a88ac5f8a1",
+            "818c117b6a2c2cac",
+            "e47ade336ed4e24a",
+            "3861a7586ffc161b"
+          ]
+        },
+        {
+          "text": "In P2, COVID-19 was associated with neuroinflammation, brain microvascular injury, and aberrant Alzheimer's biomarker expression, though press coverage overstated the Alzheimer's link.",
           "claim_ids": [
             "026bb4d33e942dd3",
-            "8412c8190a66bd1f",
+            "fe74e054721cb905",
             "c0a14467886af68a",
-            "fe74e054721cb905"
+            "8412c8190a66bd1f"
           ]
         }
       ],
@@ -68,7 +64,6 @@
         "3861a7586ffc161b",
         "60eeab60590fb6c4",
         "6a21b16128ae8e45",
-        "7570fd671450e2df",
         "774d92a88ac5f8a1",
         "818c117b6a2c2cac",
         "8412c8190a66bd1f",
@@ -76,61 +71,53 @@
         "9ea394b324a292eb",
         "c0a14467886af68a",
         "c6d2274ff9fd422b",
-        "e2bdffb7288410e5",
         "e47ade336ed4e24a",
         "fe74e054721cb905"
       ],
       "stats": {
-        "claims": 18,
-        "claims_shown": 18,
-        "papers": 3,
+        "claims": 16,
+        "claims_shown": 16,
+        "papers": 2,
         "directions": {
-          "increase": 8,
+          "increase": 7,
           "no_effect": 5,
-          "unclear": 4,
-          "decrease": 1
+          "unclear": 4
         },
         "strengths": {
           "1": 11,
-          "0": 5,
-          "3": 2
+          "0": 5
         },
-        "claims_with_press_match": 10,
+        "claims_with_press_match": 8,
         "press_labels": {
-          "aligned": 8,
-          "overstated": 3
+          "aligned": 7,
+          "overstated": 1
         },
         "retracted_papers": 0
       }
     },
     {
-      "community_id": 2,
+      "community_id": 3,
       "title": "Long COVID associations with hypertension, dyspnoea, ventilation, age and sex",
-      "summary": "This community covers long COVID (post-COVID syndrome) and its associations with hypertension, dyspnoea, mechanical ventilation, age and sex, drawn from two papers. All five claims are correlational, stated as 'associated with' (strength 1), and all report an increase, so no findings conflict. The age and female sex finding appears under two exposure labels because the same P2 wording is listed twice. Of the five claims, three have a press match: the hypertension claim was overstated in press (press strength 2 vs paper strength 1), while the ventilation and age claims were aligned. The dyspnoea and female sex claims had no press match.",
+      "summary": "This community covers long COVID (post-COVID syndrome) as the outcome, with hypertension, dyspnoea and mechanical ventilation as linked features, and age and female sex as exposures. Both papers report associations at strength 1 ('associated with'), with no causal wording and no null findings. The five claims all point in the direction of increase, so the papers do not conflict. The Swedish cohort reports hypertension as associated with the post-COVID syndrome cohort, though most of those individuals received that diagnosis before COVID-19. Press coverage was aligned with the paper for the three claims that had a matched press statement, and the other two claims had no matched press statement.",
       "key_findings": [
         {
-          "text": "Long COVID was associated with hypertension, with the paper noting that most individuals received this diagnosis before COVID-19; press coverage overstated this finding.",
+          "text": "Post-COVID syndrome cohorts were associated with higher rates of hypertension and dyspnoea than COVID-19-negative and COVID-19-positive controls.",
           "claim_ids": [
-            "0979f5e8f25bbe69"
-          ]
-        },
-        {
-          "text": "Women and older participants were associated with greater susceptibility to long-lasting COVID-19 symptoms.",
-          "claim_ids": [
-            "43ea8278ee20f0a4",
-            "6d3f8e6ba0e5f08c"
-          ]
-        },
-        {
-          "text": "Dyspnoea was associated with long COVID and was new to the majority of cases compared with controls.",
-          "claim_ids": [
+            "0979f5e8f25bbe69",
             "7a5991d31d273132"
           ]
         },
         {
-          "text": "Mechanical ventilation during initial COVID-19 was associated with long COVID compared with no outpatient or inpatient contact.",
+          "text": "Mechanical ventilation during initial COVID-19 was associated with post-COVID syndrome compared with no outpatient or inpatient contact.",
           "claim_ids": [
             "d7854e9bc9fe2098"
+          ]
+        },
+        {
+          "text": "Older age and female sex were associated with increased susceptibility to long-lasting COVID-19 symptoms.",
+          "claim_ids": [
+            "43ea8278ee20f0a4",
+            "6d3f8e6ba0e5f08c"
           ]
         }
       ],
@@ -153,25 +140,24 @@
         },
         "claims_with_press_match": 3,
         "press_labels": {
-          "aligned": 3,
-          "overstated": 1
+          "aligned": 3
         },
         "retracted_papers": 0
       }
     },
     {
       "community_id": 5,
-      "title": "Losartan and remote limb conditioning reduce brain edema",
-      "summary": "These two claims come from separate papers, one on losartan in NF2 mouse models and one on remote limb conditioning after stroke in mice, and both study brain edema as the outcome. Both papers state a direct causal decrease in edema, so they agree in direction. No conflicting results appear in this community. Press releases for both papers were aligned with the paper's strength, so no overstatement or understatement was recorded. Neither paper is retracted.",
+      "title": "Losartan and remote limb conditioning reduce brain edema in rodent models",
+      "summary": "This community groups two rodent studies, one on losartan in NF2 schwannoma models and one on remote limb conditioning after stroke, both linked to brain edema. Both papers report a decrease in brain edema, and the claims show no conflicting directions. Each claim is worded as a direct causal relationship (strength 3), and press coverage of both was labelled aligned with the paper's strength. No retracted papers appear in this community.",
       "key_findings": [
         {
-          "text": "Losartan is reported to directly reduce neuro-edema and brain edema in NF2 mouse models.",
+          "text": "Losartan decreased neuro-edema and brain edema in NF2 mouse models.",
           "claim_ids": [
             "0bf80d72baddc90d"
           ]
         },
         {
-          "text": "Remote limb conditioning is reported to directly reduce brain edema after stroke in mice.",
+          "text": "Remote limb conditioning after stroke decreased cerebral edema and brain swelling in mice.",
           "claim_ids": [
             "5ff60eba9af31447"
           ]
@@ -200,19 +186,26 @@
     },
     {
       "community_id": 7,
-      "title": "Motor function improvement after TFE3 overexpression or remote limb conditioning",
-      "summary": "These two papers study unrelated exposures, TFE3 overexpression in an alpha-synuclein Parkinson's model and remote postischemic limb conditioning after stroke, and share only the outcome of motor function. Both claims report an increase in motor function with direct causal wording, so the papers do not conflict. The TFE3 claim [C1] has no matched press statement. The remote conditioning claim [C2] has two matched press statements, labeled aligned and overstated. Neither paper is retracted.",
+      "title": "TFE3 overexpression and remote ischemic limb conditioning linked to motor function recovery",
+      "summary": "This community groups two papers that share motor function as an outcome but study different exposures: TFE3 overexpression in an alpha-synuclein Parkinson's model and remote ischemic limb conditioning after stroke. Both papers state a direct causal increase in motor function, so the claims do not conflict. Press coverage matched only the stroke finding, which is labeled aligned with the paper, while the TFE3 finding has no press statement. Neither paper is retracted, and the claims do not address a shared mechanism.",
       "key_findings": [
         {
-          "text": "TFE3 overexpression is reported to restore motor function in an alpha-synuclein overexpression model of Parkinson's disease.",
+          "text": "TFE3 overexpression reduces the loss of dopaminergic neurons and restores motor function in an alpha-synuclein overexpression model of Parkinson's disease.",
           "claim_ids": [
             "b20b9176817fcfdd"
           ]
         },
         {
-          "text": "Poststroke remote limb conditioning is reported to increase motor and gait function in chronic stroke, alongside a shift of circulating monocytes to a CCR2+ proinflammatory subset.",
+          "text": "Remote ischemic limb conditioning after stroke shifts circulating monocytes to a CCR2+ proinflammatory subset and improves motor and gait function in chronic stroke.",
           "claim_ids": [
             "3cd5ea8960607ca1"
+          ]
+        },
+        {
+          "text": "Press coverage of the remote ischemic limb conditioning finding is aligned with its paper, while the TFE3 finding has no matched press statement.",
+          "claim_ids": [
+            "3cd5ea8960607ca1",
+            "b20b9176817fcfdd"
           ]
         }
       ],
@@ -232,8 +225,7 @@
         },
         "claims_with_press_match": 1,
         "press_labels": {
-          "aligned": 1,
-          "overstated": 1
+          "aligned": 1
         },
         "retracted_papers": 0
       }
