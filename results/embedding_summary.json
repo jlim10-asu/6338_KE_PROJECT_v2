@@ -1,9 +1,9 @@
 {
   "model": "abhinand/MedEmbed-base-v0.1",
   "indexes": {
-    "entity_embedding": 162,
-    "claim_embedding": 92,
-    "statement_embedding": 79,
-    "community_embedding": 4
+    "entity_embedding": 3120,
+    "claim_embedding": 1997,
+    "statement_embedding": 1881,
+    "community_embedding": 90
   }
 }

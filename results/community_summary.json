@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-19T22:40:53.271636+00:00",
+  "run_at": "2026-11-21T05:00:21.258468+00:00",
   "algorithm": "gds.leiden.write",
   "min_size": 2,
   "seed": 42,
@@ -18,85 +18,266 @@
   ],
   "anchor_weight": 0.5,
   "projection": {
-    "claims_with_shared_entity": 25,
-    "claim_pairs": 112
+    "claims_with_shared_entity": 1179,
+    "claim_pairs": 14720
   },
   "leiden": {
-    "communityCount": 4,
-    "modularity": 0.25318877551020413,
-    "ranLevels": 2,
+    "communityCount": 90,
+    "modularity": 0.7901337266963993,
+    "ranLevels": 4,
     "didConverge": true,
-    "nodePropertiesWritten": 25
+    "nodePropertiesWritten": 1179
   },
-  "communities_written": 4,
-  "claims_total": 92,
-  "claims_in_community": 25,
-  "claims_unassigned": 67,
+  "communities_written": 90,
+  "claims_total": 1997,
+  "claims_in_community": 1179,
+  "claims_unassigned": 818,
   "size_min_max_mean": [
     2,
-    16,
-    6.25
+    88,
+    13.1
   ],
-  "multi_paper_communities": 4,
+  "multi_paper_communities": 90,
   "communities_below_min_size": 0,
   "top_communities": [
     {
-      "community_id": 1,
-      "claims": 16,
-      "papers": 2,
+      "community_id": 15,
+      "claims": 88,
+      "papers": 21,
       "top_entities": [
-        "COVID-19",
-        "taste and smell dysfunction",
-        "Dyspnea",
-        "Cough",
-        "Headache",
-        "Throat sore",
-        "muscle pain",
-        "Myalgia"
-      ],
-      "top_anchors": []
-    },
-    {
-      "community_id": 3,
-      "claims": 5,
-      "papers": 2,
-      "top_entities": [
+        "Respiration, Artificial",
+        "mortality",
         "female sex",
         "long COVID",
         "age",
-        "mechanical ventilation",
-        "Respiration, Artificial",
-        "hypertension",
-        "Dyspnoea"
-      ],
-      "top_anchors": []
-    },
-    {
-      "community_id": 7,
-      "claims": 2,
-      "papers": 2,
-      "top_entities": [
-        "tfe3",
-        "motor function",
-        "remote ischemic limb conditioning"
+        "wildtype sars-cov-2 infection",
+        "alpha sars-cov-2 infection",
+        "delta sars-cov-2 infection"
       ],
       "top_anchors": [
+        "COVID-19",
+        "long COVID",
+        "Neurobehavioral Manifestations",
+        "anxiety disorder",
+        "viral infectious disease",
+        "Epstein-Barr virus infectious disease"
+      ]
+    },
+    {
+      "community_id": 50,
+      "claims": 81,
+      "papers": 32,
+      "top_entities": [
+        "mild cognitive impairment",
+        "neurofilament light",
+        "Alzheimer's disease",
+        "quadruple misfolded proteins",
+        "dementia",
+        "blindness",
+        "insulin-like growth factor binding protein 2",
+        "neighborhood socioeconomic disadvantage"
+      ],
+      "top_anchors": [
+        "Physical Activity",
+        "speech processing",
+        "working memory",
+        "Gray Matter",
+        "Smoking",
+        "Sexual Behavior",
+        "Auditory Cortex",
+        "Evoked Potentials"
+      ]
+    },
+    {
+      "community_id": 12,
+      "claims": 76,
+      "papers": 36,
+      "top_entities": [
+        "cortical thickness",
+        "neurofilament light",
+        "adaptive skills",
+        "autism spectrum disorder",
+        "sex",
+        "Sleep disturbance",
+        "gray matter volume",
+        "Apathy"
+      ],
+      "top_anchors": [
+        "Cerebral Cortex",
+        "Gray Matter",
+        "White Matter",
+        "schizophrenia",
+        "Communication",
+        "Psychosocial Intervention",
+        "autism spectrum disorder",
+        "Psychosocial Functioning"
+      ]
+    },
+    {
+      "community_id": 8,
+      "claims": 73,
+      "papers": 35,
+      "top_entities": [
+        "working memory performance",
+        "Appetite",
+        "amygdala-hippocampal theta coupling",
+        "pattern separation",
+        "alpha band synchrony",
+        "discrimination",
+        "Modafinil",
+        "serious adverse events"
+      ],
+      "top_anchors": [
+        "working memory",
+        "Theta Rhythm",
+        "Alpha Rhythm",
+        "Adverse reaction",
+        "Neurites",
+        "Nerve Net",
+        "Beta Rhythm",
+        "Perceptual Distortion"
+      ]
+    },
+    {
+      "community_id": 11,
+      "claims": 68,
+      "papers": 33,
+      "top_entities": [
+        "som+ interneuron ablation",
+        "spatial learning",
+        "psychological stress",
+        "neural activity",
+        "action stopping",
+        "cortico-spinal excitability",
+        "subthalamic nucleus",
+        "predator stress"
+      ],
+      "top_anchors": [
+        "Spatial Memory",
+        "Cortical Excitability",
+        "Neural Inhibition",
+        "Synaptic Transmission",
+        "Neural Pathways",
+        "Radiotherapy",
+        "Intracranial Pressure",
         "Ischemic Preconditioning"
       ]
     },
     {
-      "community_id": 5,
-      "claims": 2,
-      "papers": 2,
+      "community_id": 66,
+      "claims": 66,
+      "papers": 19,
       "top_entities": [
-        "Losartan",
-        "neuro-edema",
-        "brain edema",
-        "remote ischemic limb conditioning",
-        "Edema cerebral"
+        "COVID-19",
+        "social participation",
+        "well-being",
+        "taste and smell dysfunction",
+        "Dyspnea",
+        "Cough",
+        "Headache",
+        "pharyngitis"
       ],
       "top_anchors": [
-        "Ischemic Preconditioning"
+        "Neuroglia",
+        "Sympathetic Nervous System",
+        "Autonomic Nervous System",
+        "Cerebrum",
+        "Neocortex"
+      ]
+    },
+    {
+      "community_id": 22,
+      "claims": 63,
+      "papers": 34,
+      "top_entities": [
+        "education level",
+        "memory",
+        "hippocampal volume",
+        "neurofilament light",
+        "amyotrophic lateral sclerosis",
+        "syt13 expression",
+        "testing",
+        "low-dose ionizing radiation"
+      ],
+      "top_anchors": [
+        "Hippocampus",
+        "Sleep, Slow-Wave",
+        "Laser Therapy",
+        "Blood-Brain Barrier",
+        "episodic memory",
+        "Interneurons",
+        "neurodegenerative disease",
+        "Discrimination, Psychological"
+      ]
+    },
+    {
+      "community_id": 21,
+      "claims": 56,
+      "papers": 23,
+      "top_entities": [
+        "brain atrophy",
+        "neurofilament light",
+        "som+ interneuron ablation",
+        "neuronal activity",
+        "low-dose ionizing radiation",
+        "microglial clustering",
+        "microglia depletion",
+        "motor recovery"
+      ],
+      "top_anchors": [
+        "Microglia",
+        "Neurogenesis",
+        "Cognitive Behavioral Therapy",
+        "Myelin Sheath",
+        "Calcium Channel Blockers"
+      ]
+    },
+    {
+      "community_id": 31,
+      "claims": 50,
+      "papers": 26,
+      "top_entities": [
+        "psychotic disorder",
+        "Cognition",
+        "anti-nrxn1\u03b1 autoantibodies",
+        "subthalamic nucleus deep-brain stimulation",
+        "cortico-spinal excitability",
+        "exercise",
+        "maze errors",
+        "gamma entrainment"
+      ],
+      "top_anchors": [
+        "Deep Brain Stimulation",
+        "Cortical Excitability",
+        "Physician-Patient Relations",
+        "anxiety disorder",
+        "Life Style",
+        "Neurobehavioral Manifestations"
+      ]
+    },
+    {
+      "community_id": 36,
+      "claims": 45,
+      "papers": 31,
+      "top_entities": [
+        "education level",
+        "Executive Function",
+        "psychotic disorder",
+        "verbal knowledge",
+        "verbal fluency",
+        "abstraction-executive function",
+        "cognitive aging",
+        "insulin-like growth factor binding protein 2"
+      ],
+      "top_anchors": [
+        "semantic information",
+        "Executive Function",
+        "reasoning",
+        "activation",
+        "recall",
+        "Reaction Time",
+        "facial expression",
+        "Processing Speed"
       ]
     }
   ]

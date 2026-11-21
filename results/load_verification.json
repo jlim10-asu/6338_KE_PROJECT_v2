@@ -33,6 +33,10 @@
       {
         "label": "Institution",
         "n": 329
+      },
+      {
+        "label": "Community",
+        "n": 90
       }
     ]
   },
@@ -144,6 +148,14 @@
         "n": 1208
       },
       {
+        "type": "IN_COMMUNITY",
+        "n": 1179
+      },
+      {
+        "type": "ANCHORED_TO",
+        "n": 595
+      },
+      {
         "type": "ISSUED_BY",
         "n": 498
       },
@@ -244,11 +256,129 @@
   },
   {
     "query": "MATCH (m:MedicalEntity)-[:ANCHORED_TO]->(o:OntologyTerm) RETURN m.entity_type AS entity_type, o.kind AS anchor_kind, m.o",
-    "rows": []
+    "rows": [
+      {
+        "entity_type": "physiology",
+        "anchor_kind": "Anatomy",
+        "exact": false,
+        "n": 168
+      },
+      {
+        "entity_type": "physiology",
+        "anchor_kind": "Mental Process",
+        "exact": false,
+        "n": 165
+      },
+      {
+        "entity_type": "physiology",
+        "anchor_kind": "Physiology",
+        "exact": false,
+        "n": 61
+      },
+      {
+        "entity_type": "disorder",
+        "anchor_kind": "Disease",
+        "exact": false,
+        "n": 44
+      },
+      {
+        "entity_type": "behavior",
+        "anchor_kind": "Mental Process",
+        "exact": false,
+        "n": 43
+      },
+      {
+        "entity_type": "procedure",
+        "anchor_kind": "Procedure",
+        "exact": false,
+        "n": 39
+      },
+      {
+        "entity_type": "behavior",
+        "anchor_kind": "Behavior",
+        "exact": false,
+        "n": 30
+      },
+      {
+        "entity_type": "disorder",
+        "anchor_kind": "Symptom",
+        "exact": false,
+        "n": 29
+      },
+      {
+        "entity_type": "chemical_drug",
+        "anchor_kind": "Drug Class",
+        "exact": false,
+        "n": 9
+      },
+      {
+        "entity_type": "disorder",
+        "anchor_kind": "Side Effect",
+        "exact": false,
+        "n": 6
+      },
+      {
+        "entity_type": "procedure",
+        "anchor_kind": "Cognitive Task",
+        "exact": false,
+        "n": 1
+      }
+    ]
   },
   {
     "query": "MATCH (m:MedicalEntity)-[:ANCHORED_TO]->(o:OntologyTerm) RETURN o.id AS id, o.name AS anchor, count(m) AS entities ORDER",
-    "rows": []
+    "rows": [
+      {
+        "id": "MESH:D017628",
+        "anchor": "Microglia",
+        "entities": 17
+      },
+      {
+        "id": "MESH:D058256",
+        "anchor": "Brain Waves",
+        "entities": 12
+      },
+      {
+        "id": "MESH:D008568",
+        "anchor": "Memory",
+        "entities": 11
+      },
+      {
+        "id": "MESH:D006624",
+        "anchor": "Hippocampus",
+        "entities": 10
+      },
+      {
+        "id": "MESH:D009435",
+        "anchor": "Synaptic Transmission",
+        "entities": 10
+      },
+      {
+        "id": "MESH:D009415",
+        "anchor": "Nerve Net",
+        "entities": 9
+      },
+      {
+        "id": "MESH:D012816",
+        "anchor": "Signs and Symptoms",
+        "entities": 9
+      },
+      {
+        "id": "MESH:D013826",
+        "anchor": "Theta Rhythm",
+        "entities": 8
+      },
+      {
+        "id": "DOID:0080600",
+        "anchor": "COVID-19",
+        "entities": 8
+      },
+      {
+        "id": "MESH:D021641",
+        "anchor": "Recognition, Psychology",
+        "entities": 7
+      }
+    ]
   },
   {
     "query": "MATCH (s:Statement) WHERE NOT EXISTS { (s)-[:APPEARS_IN]->() } WITH count(s) AS n RETURN 'statement_without_release' AS ",
@@ -491,11 +621,11 @@
     "query": "MATCH (k:Community) RETURN count(k) AS communities, sum(k.size) AS claims, min(k.size) AS min_size, max(k.size) AS max_s",
     "rows": [
       {
-        "communities": 0,
-        "claims": 0,
-        "min_size": null,
-        "max_size": null,
-        "multi_paper": 0
+        "communities": 90,
+        "claims": 1179,
+        "min_size": 2,
+        "max_size": 88,
+        "multi_paper": 90
       }
     ]
   }

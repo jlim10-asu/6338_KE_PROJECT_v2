@@ -1,26 +1,36 @@
 {
-  "run": {},
+  "run": {
+    "anchor_nil": 920,
+    "no_candidates": 350,
+    "anchor_select": 681
+  },
   "cleared_by_stoplist": 0,
-  "edges_written": 16,
+  "edges_written": 595,
   "min_confidence": 0.6,
-  "below_cutoff": 7,
+  "below_cutoff": 86,
   "by_method": {
-    "anchor_nil": 39,
-    "anchor_select": 23,
-    "no_candidates": 19
+    "anchor_nil": 920,
+    "anchor_select": 681,
+    "no_candidates": 350
   },
   "anchored_by_type": {
-    "behavior": 3,
-    "disorder": 4,
-    "physiology": 12,
-    "procedure": 4
+    "behavior": 89,
+    "chemical_drug": 9,
+    "disorder": 88,
+    "physiology": 447,
+    "procedure": 48
   },
   "anchored_by_kind": {
-    "Anatomy": 1,
-    "Disease": 4,
-    "Mental Process": 12,
-    "Physiology": 2,
-    "Procedure": 4
+    "Anatomy": 179,
+    "Behavior": 37,
+    "Cognitive Task": 1,
+    "Disease": 48,
+    "Drug Class": 9,
+    "Mental Process": 248,
+    "Physiology": 72,
+    "Procedure": 47,
+    "Side Effect": 7,
+    "Symptom": 33
   },
-  "distinct_anchor_terms": 21
+  "distinct_anchor_terms": 311
 }
