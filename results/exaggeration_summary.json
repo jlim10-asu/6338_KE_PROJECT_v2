@@ -1,34 +1,34 @@
 {
-  "run_id": "0fc12ed71718",
-  "run_at": "2026-11-19T22:39:18.350927+00:00",
+  "run_id": "0b582740976f",
+  "run_at": "2026-11-21T01:50:44.883406+00:00",
   "active_mode": "llm",
   "embed_model": "sentence-transformers/all-MiniLM-L6-v2",
   "embed": {
     "threshold": 0.6,
     "margin": 0.05,
-    "statements": 79,
-    "resolved": 37,
-    "resolved_rate": 0.468,
+    "statements": 1881,
+    "resolved": 956,
+    "resolved_rate": 0.508,
     "by_method": {
-      "semantic": 21,
-      "entity": 16
+      "semantic": 673,
+      "entity": 283
     },
     "unresolved_by_reason": {
-      "ambiguous": 19,
-      "below_threshold": 18,
-      "no_finding": 5
+      "below_threshold": 461,
+      "ambiguous": 402,
+      "no_finding": 62
     },
     "labels": {
-      "aligned": 29,
-      "overstated": 4,
-      "understated": 4
+      "aligned": 651,
+      "understated": 161,
+      "overstated": 144
     },
-    "mean_strength_delta": 0.0,
+    "mean_strength_delta": -0.049,
     "rerated_vs_extraction": 0,
     "null_reframed": 0,
-    "direction_conflicts": 1,
-    "releases_scored": 11,
-    "releases_with_overstatement": 3,
+    "direction_conflicts": 147,
+    "releases_scored": 332,
+    "releases_with_overstatement": 98,
     "retracted_source_matches": 0
   },
   "llm": {
@@ -36,36 +36,36 @@
     "effort": "high",
     "top_k": 3,
     "floor": 0.4,
-    "statements": 79,
-    "resolved": 57,
-    "resolved_rate": 0.722,
+    "statements": 1881,
+    "resolved": 1208,
+    "resolved_rate": 0.642,
     "by_method": {
-      "llm": 42,
-      "llm_entity": 15
+      "llm": 953,
+      "llm_entity": 255
     },
     "unresolved_by_reason": {
-      "llm_none": 14,
-      "no_finding": 5,
-      "no_candidates": 3
+      "llm_none": 501,
+      "no_candidates": 110,
+      "no_finding": 62
     },
     "labels": {
-      "aligned": 48,
-      "overstated": 5,
-      "understated": 4
+      "aligned": 857,
+      "overstated": 207,
+      "understated": 144
     },
-    "mean_strength_delta": 0.035,
-    "rerated_vs_extraction": 14,
-    "null_reframed": 1,
-    "direction_conflicts": 0,
-    "releases_scored": 15,
-    "releases_with_overstatement": 4,
+    "mean_strength_delta": 0.085,
+    "rerated_vs_extraction": 240,
+    "null_reframed": 6,
+    "direction_conflicts": 36,
+    "releases_scored": 375,
+    "releases_with_overstatement": 138,
     "retracted_source_matches": 0
   },
   "comparison": {
-    "both_resolved": 33,
-    "same_claim": 31,
-    "same_label": 27,
-    "embed_only": 4,
-    "llm_only": 24
+    "both_resolved": 784,
+    "same_claim": 652,
+    "same_label": 625,
+    "embed_only": 172,
+    "llm_only": 424
   }
 }

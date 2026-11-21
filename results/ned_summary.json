@@ -1,38 +1,38 @@
 {
-  "exact_lexicon": 19,
-  "llm_nil": 60,
-  "llm_select": 17,
-  "no_candidates": 21,
-  "not_in_vocab": 32,
-  "distinct_canonical": 145,
-  "distinct_mentions": 149,
+  "exact_lexicon": 275,
+  "llm_nil": 1569,
+  "llm_select": 317,
+  "no_candidates": 382,
+  "not_in_vocab": 716,
+  "distinct_canonical": 3120,
+  "distinct_mentions": 3259,
   "by_type": {
     "physiology": {
-      "mentions": 62,
-      "linked": 6
-    },
-    "disorder": {
-      "mentions": 34,
-      "linked": 25
+      "mentions": 1518,
+      "linked": 195
     },
     "other": {
-      "mentions": 32,
+      "mentions": 716,
       "linked": 0
     },
+    "disorder": {
+      "mentions": 445,
+      "linked": 255
+    },
     "behavior": {
-      "mentions": 11,
-      "linked": 2
+      "mentions": 266,
+      "linked": 54
     },
     "procedure": {
-      "mentions": 7,
-      "linked": 1
+      "mentions": 169,
+      "linked": 40
     },
     "chemical_drug": {
-      "mentions": 3,
-      "linked": 2
+      "mentions": 145,
+      "linked": 48
     }
   },
-  "mixed_type_mentions": 2,
+  "mixed_type_mentions": 85,
   "kinds_by_type": {
     "disorder": [
       "Disease",

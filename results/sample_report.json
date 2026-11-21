@@ -17,7 +17,7 @@
     "year_min": 2018,
     "year_max": null
   },
-  "sample_size": 20,
+  "sample_size": 500,
   "seed": 42,
   "funnel": [
     [
@@ -78,42 +78,48 @@
     ],
     [
       "crawled in rank order (examined)",
-      22
+      529
     ],
     [
       "abstracts judged (releases with press body text)",
-      22
+      529
     ],
     [
       "  no usable abstract after backfill (skipped; next rank took the place)",
-      2
+      29
     ],
     [
-      "study sample: first 20 with body text and a usable abstract",
-      20
+      "study sample: first 500 with body text and a usable abstract",
+      500
     ]
   ],
   "sample_by_subfield": {
-    "Cognitive Neuroscience": 9,
-    "Clinical Neurology": 9,
-    "Psychiatry and Mental health": 1,
-    "Neurology": 1
+    "Cognitive Neuroscience": 217,
+    "Clinical Neurology": 143,
+    "Psychiatry and Mental health": 76,
+    "Neurology": 35,
+    "Geriatrics and Gerontology": 21,
+    "Behavioral Neuroscience": 5,
+    "Biological Psychiatry": 3
   },
   "sample_by_year": {
-    "2018": 4,
-    "2019": 5,
-    "2020": 2,
-    "2021": 4,
-    "2022": 1,
-    "2023": 2,
-    "2024": 2
+    "2017": 2,
+    "2018": 62,
+    "2019": 77,
+    "2020": 69,
+    "2021": 80,
+    "2022": 55,
+    "2023": 71,
+    "2024": 65,
+    "2025": 19
   },
   "retracted_papers": 0,
-  "with_pmcid": 14,
+  "with_pmcid": 379,
   "abstract_chosen_by_source": {
-    "corpus": 1,
-    "pmc": 13,
-    "pubmed": 6
+    "corpus": 15,
+    "crossref": 4,
+    "pmc": 364,
+    "pubmed": 117
   },
-  "crossref_checked": 20
+  "crossref_checked": 499
 }

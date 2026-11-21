@@ -8,35 +8,31 @@
       },
       {
         "label": "MedicalEntity",
-        "n": 162
+        "n": 3120
       },
       {
         "label": "ScientificClaim",
-        "n": 92
+        "n": 1997
       },
       {
         "label": "Statement",
-        "n": 79
-      },
-      {
-        "label": "Institution",
-        "n": 20
+        "n": 1881
       },
       {
         "label": "SourceRelease",
-        "n": 20
+        "n": 498
       },
       {
         "label": "Paper",
-        "n": 20
+        "n": 498
       },
       {
         "label": "Chunk",
-        "n": 20
+        "n": 498
       },
       {
-        "label": "Community",
-        "n": 4
+        "label": "Institution",
+        "n": 329
       }
     ]
   },
@@ -124,52 +120,44 @@
     "query": "MATCH ()-[r]->() RETURN type(r) AS type, count(*) AS n ORDER BY n DESC",
     "rows": [
       {
-        "type": "HAS_OUTCOME",
-        "n": 201
+        "type": "HAS_EXPOSURE",
+        "n": 3878
       },
       {
-        "type": "HAS_EXPOSURE",
-        "n": 175
+        "type": "HAS_OUTCOME",
+        "n": 3878
       },
       {
         "type": "REPORTS",
-        "n": 92
+        "n": 1997
       },
       {
         "type": "APPEARS_IN",
-        "n": 79
+        "n": 1881
       },
       {
         "type": "EXTRACTED_FROM",
-        "n": 79
+        "n": 1881
       },
       {
         "type": "GROUNDS_IN",
-        "n": 57
-      },
-      {
-        "type": "DISAMBIGUATED_TO",
-        "n": 39
-      },
-      {
-        "type": "IN_COMMUNITY",
-        "n": 25
+        "n": 1208
       },
       {
         "type": "ISSUED_BY",
-        "n": 20
+        "n": 498
       },
       {
         "type": "ANNOUNCES",
-        "n": 20
+        "n": 498
       },
       {
         "type": "CHUNK_OF",
-        "n": 20
+        "n": 498
       },
       {
-        "type": "ANCHORED_TO",
-        "n": 16
+        "type": "DISAMBIGUATED_TO",
+        "n": 454
       }
     ]
   },
@@ -200,155 +188,67 @@
       {
         "entity_type": "behavior",
         "linked": false,
-        "entities": 11
+        "entities": 212
       },
       {
         "entity_type": "behavior",
         "linked": true,
-        "entities": 3
+        "entities": 45
       },
       {
         "entity_type": "chemical_drug",
         "linked": false,
-        "entities": 2
+        "entities": 97
       },
       {
         "entity_type": "chemical_drug",
         "linked": true,
-        "entities": 2
+        "entities": 43
       },
       {
         "entity_type": "disorder",
         "linked": false,
-        "entities": 12
+        "entities": 190
       },
       {
         "entity_type": "disorder",
         "linked": true,
-        "entities": 24
+        "entities": 199
       },
       {
         "entity_type": "other",
         "linked": false,
-        "entities": 32
+        "entities": 715
       },
       {
         "entity_type": "physiology",
         "linked": false,
-        "entities": 60
+        "entities": 1323
       },
       {
         "entity_type": "physiology",
         "linked": true,
-        "entities": 8
+        "entities": 134
       },
       {
         "entity_type": "procedure",
         "linked": false,
-        "entities": 7
+        "entities": 129
       },
       {
         "entity_type": "procedure",
         "linked": true,
-        "entities": 1
+        "entities": 33
       }
     ]
   },
   {
     "query": "MATCH (m:MedicalEntity)-[:ANCHORED_TO]->(o:OntologyTerm) RETURN m.entity_type AS entity_type, o.kind AS anchor_kind, m.o",
-    "rows": [
-      {
-        "entity_type": "physiology",
-        "anchor_kind": "Mental Process",
-        "exact": false,
-        "n": 6
-      },
-      {
-        "entity_type": "procedure",
-        "anchor_kind": "Procedure",
-        "exact": false,
-        "n": 3
-      },
-      {
-        "entity_type": "disorder",
-        "anchor_kind": "Disease",
-        "exact": false,
-        "n": 3
-      },
-      {
-        "entity_type": "physiology",
-        "anchor_kind": "Physiology",
-        "exact": false,
-        "n": 2
-      },
-      {
-        "entity_type": "physiology",
-        "anchor_kind": "Anatomy",
-        "exact": false,
-        "n": 1
-      },
-      {
-        "entity_type": "behavior",
-        "anchor_kind": "Mental Process",
-        "exact": false,
-        "n": 1
-      }
-    ]
+    "rows": []
   },
   {
     "query": "MATCH (m:MedicalEntity)-[:ANCHORED_TO]->(o:OntologyTerm) RETURN o.id AS id, o.name AS anchor, count(m) AS entities ORDER",
-    "rows": [
-      {
-        "id": "COGAT:trm_4a3fd79d0b4cd",
-        "anchor": "visual search",
-        "entities": 2
-      },
-      {
-        "id": "DOID:0080600",
-        "anchor": "COVID-19",
-        "entities": 2
-      },
-      {
-        "id": "MESH:D001143",
-        "anchor": "Arousal",
-        "entities": 1
-      },
-      {
-        "id": "MESH:D003700",
-        "anchor": "Delta Rhythm",
-        "entities": 1
-      },
-      {
-        "id": "MESH:D011878",
-        "anchor": "Radiotherapy",
-        "entities": 1
-      },
-      {
-        "id": "MESH:D065818",
-        "anchor": "Gamma Rhythm",
-        "entities": 1
-      },
-      {
-        "id": "MESH:D019194",
-        "anchor": "Ischemic Preconditioning",
-        "entities": 1
-      },
-      {
-        "id": "MESH:D012890",
-        "anchor": "Sleep",
-        "entities": 1
-      },
-      {
-        "id": "COGAT:trm_502403240a2a2",
-        "anchor": "reinstatement",
-        "entities": 1
-      },
-      {
-        "id": "MESH:D009412",
-        "anchor": "Nerve Fibers",
-        "entities": 1
-      }
-    ]
+    "rows": []
   },
   {
     "query": "MATCH (s:Statement) WHERE NOT EXISTS { (s)-[:APPEARS_IN]->() } WITH count(s) AS n RETURN 'statement_without_release' AS ",
@@ -378,22 +278,22 @@
       {
         "status": "resolved",
         "reason": "-",
-        "n": 57
+        "n": 1208
       },
       {
         "status": "unresolved",
         "reason": "llm_none",
-        "n": 14
-      },
-      {
-        "status": "unresolved",
-        "reason": "no_finding",
-        "n": 5
+        "n": 501
       },
       {
         "status": "unresolved",
         "reason": "no_candidates",
-        "n": 3
+        "n": 110
+      },
+      {
+        "status": "unresolved",
+        "reason": "no_finding",
+        "n": 62
       }
     ]
   },
@@ -403,22 +303,32 @@
       {
         "label": "aligned",
         "method": "llm",
-        "n": 33
+        "n": 646
       },
       {
         "label": "aligned",
         "method": "llm_entity",
-        "n": 15
+        "n": 211
       },
       {
         "label": "overstated",
         "method": "llm",
-        "n": 5
+        "n": 185
+      },
+      {
+        "label": "overstated",
+        "method": "llm_entity",
+        "n": 22
       },
       {
         "label": "understated",
         "method": "llm",
-        "n": 4
+        "n": 122
+      },
+      {
+        "label": "understated",
+        "method": "llm_entity",
+        "n": 22
       }
     ]
   },
@@ -427,9 +337,9 @@
     "rows": [
       {
         "mode": "llm",
-        "grounds_in": 57,
-        "rerated": 14,
-        "null_reframed": 1
+        "grounds_in": 1208,
+        "rerated": 240,
+        "null_reframed": 6
       }
     ]
   },
@@ -437,49 +347,94 @@
     "query": "MATCH (s:Statement)-[g:GROUNDS_IN {exaggeration_label: 'overstated'}]->(c:ScientificClaim)\nRETURN s.euid AS release, s.e",
     "rows": [
       {
-        "release": "798073",
-        "press_wording": "\"We discovered that SARS-CoV-2 infection significantly altered Alzheimer's markers implicated in brain inflammation and that certain viral entry factors are highly expressed in cells in the blood-brain barrier,\" explained Dr. Cheng.",
-        "paper_wording": "Our results suggest significant mechanistic overlap between AD and COVID-19, centered on neuroinflammation and microvascular injury.",
+        "release": "668724",
+        "press_wording": "Furthermore, we achieved selective and total erasure of fear memory from an engram network without affecting other memories stored in the shared ensemble by resetting the plasticity in a synapse-specific manner.",
+        "paper_wording": "Complete amnesia of a given fear memory did not affect another linked fear memory encoded in the shared ensemble.",
+        "press_strength": 3,
+        "paper_strength": 0,
+        "method": "llm",
+        "explanation": "Candidate 2 reports the same finding: erasing one fear memory left the linked memory in the shared ensemble intact, matching the press statement's selective erasure without affecting other memories. The press wording 'achieved selective and total erasure' is a direct achievement claim, which I rate as direct causal (3) with a decrease in fear memory, while candidate 2's 'did not affect' is a null result (0) with no_effect direction, and its 'Complete amnesia' phrasing is a descriptive outcome rather than a causal verb."
+      },
+      {
+        "release": "929049",
+        "press_wording": "Conversely, a more relaxed parenting style, eating together as a family, and involving a child in the preparation if food all reduced the likelihood of fussy eating.",
+        "paper_wording": "Most commonly reported extrinsic features that decrease the likelihood of picky eating are family meals, responsive parents, and involving the child in the preparation of food.",
         "press_strength": 3,
         "paper_strength": 1,
         "method": "llm",
-        "explanation": "The press statement reports that SARS-CoV-2 infection altered Alzheimer's markers implicated in brain inflammation, which best matches candidate 3's mechanistic overlap between AD and COVID-19 centred on neuroinflammation, though candidate 1 also covers the neuroinflammation relationship. The press wording 'significantly altered' is a causal-sounding change claim, while candidate 3 says 'suggest significant mechanistic overlap' (correlational, hedged, not causal) and candidate 1 says 'significant network-based relationships' (correlational)."
+        "explanation": "The press statement's finding is involving a child in food preparation reducing picky eating, which candidate 1 reports with the same exposure and outcome; candidate 3 shares the outcome but names family meals instead. The press statement's 'reduced the likelihood' is direct causal wording (3), while candidate 1's 'decrease the likelihood' in a list of features is correlational (1), since it describes an observed association rather than an assertion of causation."
       },
       {
-        "release": "857697",
-        "press_wording": "This inflammatory signaling in tumors was capable of directly damaging cochlear cells that are essential for hearing.",
-        "paper_wording": "In preparation to translate these exciting findings into the clinic, we used patient samples and data and demonstrated that IL-6/STAT3 signaling inversely associated with hearing function, that elevated production of tumor-derived IL-6 was associated with reduced viability of cochlear sensory cells and neurons in ex vivo organotypic cochlear cultures, and that patients receiving angiotensin receptor blockers have no progression in VS-induced hearing loss compared with patients on other or no antihypertensives based on a retrospective analysis of patients with VS and hypertension.",
+        "release": "944983",
+        "press_wording": "Specifically, baboons sacrificed sleep to stay awake in new environments and to remain close to their group-mates, regardless of how much they had slept the prior night or how much they had exerted themselves the preceding day.",
+        "paper_wording": "Baboons sacrificed time spent sleeping when in less familiar locations and when sleeping in proximity to more group-mates, regardless of how long they had slept the prior night or how much they had physically exerted themselves the preceding day.",
         "press_strength": 3,
         "paper_strength": 1,
         "method": "llm",
-        "explanation": "Candidate 3 reports the same finding: tumor-derived IL-6 reduces viability of cochlear sensory cells, which matches the press statement's claim that inflammatory signaling damaged cochlear cells. The press wording 'was capable of directly damaging' is direct causal (3), while candidate 3's 'was associated with reduced viability' is correlational (1) in the ex vivo setting."
+        "explanation": "Candidate 1 reports the same finding: baboons gave up sleep when sleeping near more group-mates, regardless of prior sleep, while candidate 2 covers only unfamiliar locations and candidate 3 is a null on sleep intensity. The press wording 'sacrificed sleep to remain close' asserts a direct purposive causal trade-off (3), whereas candidate 1's 'when sleeping in proximity' is only a correlational condition (1)."
       },
       {
-        "release": "798073",
-        "press_wording": "The researchers also found that individuals with the allele APOE E4/E4, the greatest genetic risk factor for Alzheimer's, had decreased expression of antiviral defense genes, which could make these patients more susceptible to COVID-19.",
-        "paper_wording": "Overall, individuals with the AD risk allele APOE E4/E4 displayed reduced expression of antiviral defense genes compared to APOE E3/E3 individuals.",
-        "press_strength": 2,
+        "release": "928705",
+        "press_wording": "In collaboration with the labs of UC Berkeley professors David Raulet and Kaoru Saijo, Kim and Bilder subsequently demonstrated that tumors in mice that release the same chemical, a cytokine called interleukin-6 (IL-6), also make the blood-brain barrier leaky.",
+        "paper_wording": "IL-6-dependent BBB dysfunction is further seen in a mouse tumor model, and it again promotes host morbidity.",
+        "press_strength": 3,
         "paper_strength": 1,
         "method": "llm",
-        "explanation": "Candidate 1 reports the same finding: APOE E4/E4 individuals show reduced antiviral defense gene expression. The press wording 'had decreased expression' is a plain observed-difference statement, but the added 'which could make these patients more susceptible to COVID-19' is a hedged causal inference, so the press statement is rated 2 (hedge plus causal verb 'make'). The candidate's 'displayed reduced expression' is a direct description of a comparison result with no hedge or causal verb, so it is rated 1 at most; it carries no causal claim, so I rate it 1 as a correlational comparison."
+        "explanation": "Candidate 1 reports the same IL-6-dependent blood-brain barrier dysfunction in a mouse tumor model, while candidate 2 is about morbidity and candidate 3 about STAT inhibition, which are different findings. The press wording 'make the blood-brain barrier leaky' is direct causal (3), whereas candidate 1's 'is further seen in a mouse tumor model' only reports an observation without a causal verb (1)."
       },
       {
-        "release": "822151",
-        "press_wording": "\"In emotional situations, the lateral preference shifts to the right,\" describes Packheiser.",
-        "paper_wording": "However, emotional context also affects side biases, most strongly for embracing.",
+        "release": "1074282",
+        "press_wording": "CHAMPAIGN, Ill. \u2014 A genetic mutation found in two human patients with schizophrenia also increased schizophrenia-related behaviors in mice with the same mutation, a rare finding of a direct genetic link to psychosis, report researchers at the University of Illinois Urbana-Champaign and colleagues in Massachusetts and Germany.",
+        "paper_wording": "Using a chromosome-engineered allelic series in mice, we report that a triplication of the gene encoding the glycine-catabolizing enzyme glycine decarboxylase (GLDC) - as found on a small supernumerary marker chromosome in patients with psychosis - reduces extracellular glycine levels as determined by optical fluorescence resonance energy transfer (FRET) in dentate gyrus (DG) and suppresses long-term potentiation (LTP) in mPP-DG synapses but not in CA3-CA1 synapses, reduces the activity of biochemical pathways implicated in schizophrenia and mitochondrial bioenergetics, and displays deficits in schizophrenia-like behaviors which are in part known to be dependent on the activity of the dentate gyrus, e.g., prepulse inhibition, startle habituation, latent inhibition, working memory, sociability and social preference.",
         "press_strength": 3,
-        "paper_strength": 2,
+        "paper_strength": 1,
         "method": "llm",
-        "explanation": "The press statement reports that in emotional situations the lateral preference shifts to the right; candidate 2 reports that emotional context affects side biases in social touch, most strongly for embracing, which is the same emotion-to-laterality finding but without the stated direction, so it is the closest match. The press quote states a directional shift as fact ('shifts to the right', no hedge, so strength 1 at most as a causal-free claim, rated 2 for an unhedged directional effect is not supported), while candidate 2 uses 'affects' which is a causal-leaning verb without a hedge and is rated 2 for conditional causal wording with a hedge-free causal verb."
+        "explanation": "Candidate 1 is the same GLDC triplication and schizophrenia-like behavior finding, though it says 'displays deficits' where the press says 'increased', so the direction is read as the schizophrenia-like phenotype. The press 'increased' is a direct causal verb (3), while the abstract's 'displays' is a descriptive, non-causal verb (1); candidates 2 and 3 report biochemical and glycine outcomes instead."
       },
       {
-        "release": "756185",
-        "press_wording": "From those results, the researchers conclude that knowledge - whether it's about health, law, history or anything else - doesn't have to be tested to be remembered, if it's closely intertwined with knowledge that is being tested.",
-        "paper_wording": "The benefit of mentally retrieving information from studied material appears to facilitate the retrieval of information that was studied without being tested.",
+        "release": "944983",
+        "press_wording": "Specifically, baboons sacrificed sleep to stay awake in new environments and to remain close to their group-mates, regardless of how much they had slept the prior night or how much they had exerted themselves the preceding day.",
+        "paper_wording": "Baboons sacrificed time spent sleeping when in less familiar locations and when sleeping in proximity to more group-mates, regardless of how long they had slept the prior night or how much they had physically exerted themselves the preceding day.",
         "press_strength": 3,
-        "paper_strength": 2,
+        "paper_strength": 1,
         "method": "llm",
-        "explanation": "Candidate 1 reports the same finding: retrieving related studied material facilitates recall of material studied without testing, which is the spillover the press statement describes. The press statement asserts this unhedged ('researchers conclude', 'doesn't have to be tested'), so it rates 3, while candidate 1 uses 'appears to facilitate', a hedge with a causal verb, so it rates 2."
+        "explanation": "Candidate 1 reports the same finding: baboons sacrificed sleep in less familiar locations, which matches the press statement's new environments. Its original wording 'sacrificed time spent sleeping' describes a behavior without causal verbs, so it is correlational (1) while the press statement's 'sacrificed sleep to stay awake' is a direct causal framing (3), though the abstract is not hedged and the behavior is observed as a direct result, so both rate as a decrease in sleep."
+      },
+      {
+        "release": "766931",
+        "press_wording": "In four studies, positive effects of exercise on cognition (memory, executive function, and global cognitive function) were shown with no negative effect of exercise on any cognitive domain.",
+        "paper_wording": "All modes of exercise are associated with improved cognitive function in individuals with PD.",
+        "press_strength": 3,
+        "paper_strength": 1,
+        "method": "llm_entity",
+        "explanation": "Candidate 1 matches the press statement's general claim that exercise improves cognition in Parkinson's disease, while candidates 2 and 3 are narrower (aerobic exercise, specific domains). The press wording 'positive effects of exercise... were shown' asserts a direct effect (3), whereas the abstract's 'are associated with' is correlational (1)."
+      },
+      {
+        "release": "957456",
+        "press_wording": "Stress boosts a kind of sleep in mice that subsequently relieves anxiety, according to new research that also pinpoints the mechanism responsible.",
+        "paper_wording": "Lesioning of VTAVgat-Sst cells abolished SDS-induced sleep; without it, anxiety and corticosterone levels remained elevated after stress.",
+        "press_strength": 3,
+        "paper_strength": 1,
+        "method": "llm_entity",
+        "explanation": "Candidate 1 reports the same finding: the sleep-anxiety link in the same mice, where removing SDS-induced sleep left anxiety elevated. The press statement says sleep 'relieves' anxiety, which is direct causal wording (3), while the abstract's 'without it, anxiety... remained elevated' has no causal verb and reads as correlational (1)."
+      },
+      {
+        "release": "968992",
+        "press_wording": "\u201cSort of like how a luggage tag tells airport workers where to send your bag, these C4B opsonins tell the astrocytes to come and take the dead microglial debris away,\u201d said Prof. Peng.",
+        "paper_wording": "In contrast, microglial debris is mainly phagocytosed by astrocytes in the brain, facilitated by C4b opsonization.",
+        "press_strength": 3,
+        "paper_strength": 1,
+        "method": "llm",
+        "explanation": "Candidate 1 reports the same finding: C4b opsonization facilitates astrocytic phagocytosis of microglial debris, which the press quote restates as C4B opsonins telling astrocytes to take the debris away. The press wording 'tell the astrocytes to come and take ... away' is a direct causal instruction and candidate 1 says 'facilitated by', a correlational-to-causal relation without a hedge, so I rate the press statement 3 and candidate 1 as 1 (facilitated by is closer to a causal-adjacent verb but not a clear direct causal verb like reduces or causes)."
+      },
+      {
+        "release": "1076685",
+        "press_wording": "\u201cBeing a woman, having experienced a severe COVID-19 infection and having a pre-existing chronic disease such as asthma are clear risk factors,\u201d says Marianna Karachaliou, co-author of the study and researcher at ISGlobal.",
+        "paper_wording": "Risk was higher among females, participants under 50 years, of low socioeconomic status, severe COVID-19 infection, elevated pre-vaccination IgG levels, obesity, and prior chronic disease, particularly asthma/chronic obstructive pulmonary disease and mental health conditions.",
+        "press_strength": 3,
+        "paper_strength": 1,
+        "method": "llm_entity",
+        "explanation": "Candidate 1 reports the same female-sex and long-COVID risk finding as the press statement, so it is the match; the press quote says 'clear risk factor' (a causal-sounding but non-hedged assertion of association) while the abstract says 'Risk was higher among females', a plain correlational association, so the press statement is rated stronger than the claim."
       }
     ]
   },
@@ -487,10 +442,40 @@
     "query": "MATCH (s:Statement)-[g:GROUNDS_IN {null_reframed: true}]->(c:ScientificClaim)\nRETURN s.euid AS release, s.evidence_span ",
     "rows": [
       {
+        "release": "1064426",
+        "press_wording": "Even with Gamma Knife radiosurgery to treat the tumor arising from this very delicate neural structure, hearing was preserved similarly in both groups.",
+        "paper_wording": "Preservation of serviceable hearing outcomes between groups showed no significant difference at 5 and 8 years, ensuring a comparable quality of auditory function (SRS 70.1% vs observation 53.4% at 5 years; P = .33).",
+        "explanation": "Candidate 1 reports the same hearing preservation result with and without radiosurgery, stated as no significant difference between groups; candidate 3 mentions hearing only as 'not compromising' and is about tumor control, so candidate 1 is the match. The press wording 'hearing was preserved similarly' is a null-result description rated 0 with no causal claim, and the candidate's 'no significant difference' is also 0, but the press release presents the null as a benefit (hearing preserved despite a delicate structure), so null_reframed is true."
+      },
+      {
         "release": "857697",
         "press_wording": "Also, patients with vestibular schwannoma who took losartan or other drugs in its class experienced no progression in hearing loss, unlike patients on other or no antihypertensive drugs.",
         "paper_wording": "In preparation to translate these exciting findings into the clinic, we used patient samples and data and demonstrated that IL-6/STAT3 signaling inversely associated with hearing function, that elevated production of tumor-derived IL-6 was associated with reduced viability of cochlear sensory cells and neurons in ex vivo organotypic cochlear cultures, and that patients receiving angiotensin receptor blockers have no progression in VS-induced hearing loss compared with patients on other or no antihypertensives based on a retrospective analysis of patients with VS and hypertension.",
         "explanation": "Candidate 2 reports the same finding: angiotensin receptor blocker users with vestibular schwannoma show no progression of hearing loss compared with other or no antihypertensives. The press statement's original wording 'experienced no progression in hearing loss' is a null result framed as a benefit, and candidate 2 wording 'have no progression' is also null (strength 0), so the press release does not strengthen the claim in scale terms but reframes it as a benefit."
+      },
+      {
+        "release": "984009",
+        "press_wording": "\u201cThe normal level of \u00df-amyloid deposition, tau aggregation, and glucose metabolism in TBI subjects compared with normal matched individuals does not support the premise that TBI can be a risk factor for Alzheimer\u2019s disease.",
+        "paper_wording": "There were no significant nor trending differences in \u03b2-amyloid or tau levels or 18F-FDG uptake between the TBI and control groups before and after controlling for covariates.",
+        "explanation": "Candidate 1 reports the same null finding for beta-amyloid between TBI veterans and controls, while candidate 2 covers a broader set of AD markers and a conclusion about increase rather than the specific amyloid comparison, so candidate 1 is the closer match. Both original wordings report no difference, so both are rated 0 (no relationship); the press statement turns the null amyloid result into an argument that TBI is not a risk factor, which is a reframing of a null result as reassurance."
+      },
+      {
+        "release": "984009",
+        "press_wording": "\u201cThe normal level of \u00df-amyloid deposition, tau aggregation, and glucose metabolism in TBI subjects compared with normal matched individuals does not support the premise that TBI can be a risk factor for Alzheimer\u2019s disease.",
+        "paper_wording": "There were no significant nor trending differences in \u03b2-amyloid or tau levels or 18F-FDG uptake between the TBI and control groups before and after controlling for covariates.",
+        "explanation": "Candidate 1 reports the same finding: no tau difference between TBI veterans and controls. Candidate 2 covers a broader later-life accumulation outcome, not tau specifically. Both the press statement and candidate 1 are null results ('normal', 'no significant nor trending differences') and rate 0. The press wording goes further by saying the null 'does not support the premise that TBI can be a risk factor', which reads as a safety assurance."
+      },
+      {
+        "release": "984009",
+        "press_wording": "\u201cThe normal level of \u00df-amyloid deposition, tau aggregation, and glucose metabolism in TBI subjects compared with normal matched individuals does not support the premise that TBI can be a risk factor for Alzheimer\u2019s disease.",
+        "paper_wording": "There were no significant nor trending differences in \u03b2-amyloid or tau levels or 18F-FDG uptake between the TBI and control groups before and after controlling for covariates.",
+        "explanation": "Candidate 1 reports the same null result for glucose metabolism (18F-FDG uptake) between TBI veterans and controls, so it matches the press statement. Both wordings are null with no causal or associational language, so the press 'normal' phrasing and the candidate's 'no significant differences' are both rated 0; the press statement uses 'normal' to support a conclusion that TBI is not a risk factor, but the reframing is a benefit/safety-style assurance only loosely, and the matched claim is a no-effect result, so null_reframed is set true."
+      },
+      {
+        "release": "992210",
+        "press_wording": "At the same time, the team could also demonstrate that healthy cells were not damaged by this stimulation.",
+        "paper_wording": "We report a remarkable restoration induced by magnetic stimulation on axonal trafficking of mitochondria and lysosomes and axonal regenerative sprouting after axotomy in FUS-ALS in vitro without obvious harmful effects on diseased and healthy neurons.",
+        "explanation": "The press statement says magnetic stimulation did not damage healthy cells, which matches candidate 1's 'without obvious harmful effects on diseased and healthy neurons'; candidate 2 adds only the microtubule mechanism and candidate 3 is about restoration of trafficking, so neither reports the no-harm finding. Both candidate 1 and the press wording are null results about harm (no effect), with 'did not damage' and 'without obvious harmful effects' rated 0, and the press release presents the absence of harm as a safety assurance."
       }
     ]
   },
@@ -506,11 +491,11 @@
     "query": "MATCH (k:Community) RETURN count(k) AS communities, sum(k.size) AS claims, min(k.size) AS min_size, max(k.size) AS max_s",
     "rows": [
       {
-        "communities": 4,
-        "claims": 25,
-        "min_size": 2,
-        "max_size": 16,
-        "multi_paper": 4
+        "communities": 0,
+        "claims": 0,
+        "min_size": null,
+        "max_size": null,
+        "multi_paper": 0
       }
     ]
   }
